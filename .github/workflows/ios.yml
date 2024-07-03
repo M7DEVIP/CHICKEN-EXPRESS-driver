@@ -14,10 +14,11 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Flutter
-        uses: subosito/flutter-action@v3  # استخدام الإصدار الأحدث من flutter-action
+        uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.22.2'
           channel: 'stable'
+          architecture: 'x64'  # تحديد معمارية x64 بدلاً من arm64
 
       - name: Install dependencies
         run: flutter pub get
