@@ -16,8 +16,8 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '2.5.3'
-          architecture: 'x86_64'  # استخدام معمارية x86_64
+          flutter-version: '3.22.2'  # استخدام الإصدار الحالي
+          channel: 'beta'  # التبديل إلى قناة beta
 
       - name: Install dependencies
         run: flutter pub get
