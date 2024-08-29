@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>CHICKEN EXPRESS Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .employee-name {
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+        .navbar-options {
+            display: flex;
+        }
+
+        .navbar-option {
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .home-btn-nav {
+            font-weight: bold;
+        }
+
+        .dashboard-container {
+            padding-top: 60px;
+        }
+
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            background-color: white;
+            width: 45%;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .chart {
+            width: 100%;
+            height: 400px;
+        }
+
+        .time-select {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .time-select select {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            background-color: #68b4ff;
+            color: #fff;
+            transition: all 0.3s ease;
+            outline: none;
+            margin-right: 26px;
+        }
+
+        .time-select select:focus {
+            border-color: #237ed8;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+
+        .time-select select:hover {
+            background-color: #5ca2e7;
+        }
+
+        #customDateInputs {
+            display: none;
+            align-items: center;
+        }
+
+        #customDateInputs input {
+            margin-right: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        #fetchCustomDateData {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .export-adata-btn {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 2px;
+            padding-right: 2px;
+            padding-left: 2px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .export-adata-btnd {
+            background-color: #E78F05F5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 2px;
+            padding-right: 2px;
+            padding-left: 2px;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-right: 10px;
+        }
+
+        .order-tracking-table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .order-tracking-table th, .order-tracking-table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .order-tracking-table th {
+            background-color: #3CA4FF;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .order-tracking-table tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        .order-tracking-table th, .order-tracking-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .order-tracking-table th {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            background-color: #3CA4FF;
+            color: white;
+        }
+
+        .order-tracking-table .new-order {
+            background-color: #d9edf7; /* لون سماوي */
+        }
+
+        .order-tracking-table .lost-order {
+            background-color: #f2dede; /* لون أحمر فاتح */
+        }
+
+        .order-tracking-table .done-order {
+            background-color: #dff0d8; /* لون أخضر فاتح */
+        }
+
+        .delay-warning {
+            background-color: #ffcccc; /* لون أحمر فاتح */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="employee-name">
+            Mohammed Abbas
+        </div>
+        <div class="navbar-options">
+            <button onclick="exportDriverData()" class="export-adata-btnd">Export Driver</button>
+                <button onclick="startExport()" class="export-adata-btn">Export</button>
+            </form>
+            {% if auth == 1 %}
+            <div class="navbar-option" onclick="redirectAdmin()">
+                Admin
+            </div>
+            {% endif %}
+            <div class="navbar-option" onclick="redirectToOrder()">
+                Menu
+            </div>
+            <div class="navbar-option" onclick="redirectToCustomer()">
+                Customers
+            </div>
+            <div class="navbar-option home-btn-nav">
+                Home
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="time-select">
+            <select id="timePeriodSelect">
+                <option value="daily">يومي</option>
+                <option value="weekly">أسبوعي</option>
+                <option value="monthly">شهري</option>
+                <option value="custom">تاريخ مخصص</option>
+            </select>
+            <div id="customDateInputs">
+                من: <input type="date" id="startDate">
+                إلى: <input type="date" id="endDate">
+                <button id="fetchCustomDateData">جلب البيانات</button>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="card">
+                <h3>الطلبات</h3>
+                <div id="ordersChart" class="chart"></div>
+            </div>
+            <div class="card">
+                <h3>احصائية الطلبات</h3>
+                <div id="customersChart" class="chart"></div>
+            </div>
+            <div class="card">
+                <h3>الإحصائيات</h3>
+                <div id="salesChart" class="chart"></div>
+            </div>
+            <div class="card">
+                <h3>الزبائن</h3>
+                <div id="topCustomersChart" class="chart"></div>
+            </div>
+            <div class="card">
+                <h3>الأرباح</h3>
+                <div id="revenueChart" class="chart"></div>
+            </div>
+
+           <!-- إضافة جدول تتبع الطلبات هنا -->
+           <div class="card">
+                <h3>تتبع الطلبات</h3>
+                <table class="order-tracking-table" id="orderTrackingTable">
+                    <thead>
+                        <tr>
+                            <th>رقم الطلب</th>
+                            <th>اسم السائق</th>
+                            <th>حالة التتبع</th>
+                            <th>وقت الطلب</th> <!-- إضافة عنوان العمود الجديد هنا -->
+                            <th>مدة التحضير</th>
+                            <th>مدة انتظار السائق</th>
+                            <th>مدة التوصيل</th>
+                            <th>المدة الكلية</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div id="loadingMessage" style="display: none; text-align: center; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 20px; border-radius: 10px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+                <h3>جارٍ تصدير الملف، يرجى الانتظار...</h3>
+            </div>
+            
+        
+
+
+            <!-- إضافة رسم بياني لنسب التأخير -->
+            <div class="card">
+                <h3>نسب التأخير</h3>
+                <div id="delayChart" class="chart"></div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="csrf_token" value="{{ csrf_token() }}">
+
+
+    <script>
+
+        document.getElementById('timePeriodSelect').addEventListener('change', function() {
+            const selectedValue = this.value;
+            const customDateInputs = document.getElementById('customDateInputs');
+            
+            if (selectedValue === 'custom') {
+                customDateInputs.style.display = 'block';
+            } else {
+                customDateInputs.style.display = 'none';
+            }
+        });
+        
+        function startExport() {
+            const csrfToken = document.getElementById('csrf_token').value;
+            const timePeriod = document.getElementById('timePeriodSelect').value;
+            let data = { timePeriod: timePeriod };
+        
+            if (timePeriod === 'custom') {
+                const startDate = document.getElementById('startDate').value;
+                const endDate = document.getElementById('endDate').value;
+                data.startDate = startDate;
+                data.endDate = endDate;
+            }
+        
+            showLoadingMessage();
+        
+            fetch('/export', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken // تضمين رمز CSRF في الترويسة
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);
+                checkExportStatus();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                hideLoadingMessage();
+            });
+        }        
+        
+        function checkExportStatus() {
+            fetch('/export/status', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then(response => response.json())
+            .then(status => {
+                console.log('Export Status:', status);
+                if (status.status === 'completed') {
+                    hideLoadingMessage();
+                    downloadExportedFile();
+                } else if (status.status === 'failed') {
+                    console.error('Export failed.');
+                    hideLoadingMessage();
+                } else {
+                    setTimeout(checkExportStatus, 5000); // إعادة التحقق كل 5 ثوانٍ
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                hideLoadingMessage();
+            });
+        }
+        
+        function downloadExportedFile() {
+            window.location.href = '/export/download';
+        }
+        
+        function showLoadingMessage() {
+            document.getElementById('loadingMessage').style.display = 'block';
+        }
+        
+        function hideLoadingMessage() {
+            document.getElementById('loadingMessage').style.display = 'none';
+        }
+
+
+        // شيتتت سواق 
+        function exportDriverData() {
+            const csrfToken = document.getElementById('csrf_token').value;
+            const timePeriod = document.getElementById('timePeriodSelect').value;
+            let data = { timePeriod: timePeriod };
+        
+            if (timePeriod === 'custom') {
+                const startDate = document.getElementById('startDate').value;
+                const endDate = document.getElementById('endDate').value;
+                data.startDate = startDate;
+                data.endDate = endDate;
+            }
+        
+            showLoadingMessage();
+        
+            fetch('/export_driver', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken // تضمين رمز CSRF في الترويسة
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);
+                checkDriverExportStatus();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                hideLoadingMessage();
+            });
+        }
+        
+        function checkDriverExportStatus() {
+            fetch('/export_driver/status', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then(response => response.json())
+            .then(status => {
+                console.log('Driver Export Status:', status);
+                if (status.status === 'completed') {
+                    hideLoadingMessage();
+                    downloadDriverExportedFile();
+                } else if (status.status === 'failed') {
+                    console.error('Export failed.');
+                    hideLoadingMessage();
+                } else {
+                    setTimeout(checkDriverExportStatus, 5000); // إعادة التحقق كل 5 ثوانٍ
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                hideLoadingMessage();
+            });
+        }
+        
+        function downloadDriverExportedFile() {
+            window.location.href = '/export_driver/download';
+        }
+        
+        function showLoadingMessage() {
+            document.getElementById('loadingMessage').style.display = 'block';
+        }
+        
+        function hideLoadingMessage() {
+            document.getElementById('loadingMessage').style.display = 'none';
+        }
+        
+        
+        
+        
+        
+        
+        
+        function redirectToCustomer() {
+            fetch('/customerwin')
+              .then(response => {
+                if (response.ok) {
+                  window.location.href = "/customerwin";
+                } else {
+                  console.log('حدث خطأ في الطلب.');
+                }
+              })
+              .catch(error => {
+                console.log('حدث خطأ في الاتصال.', error);
+              });
+        }
+
+        function redirectToOrder() {
+            fetch('/orderwin')
+              .then(response => {
+                if (response.ok) {
+                  window.location.href = "/orderwin";
+                } else {
+                  console.log('حدث خطأ في الطلب.');
+                }
+              })
+              .catch(error => {
+                console.log('حدث خطأ في الاتصال.', error);
+              });
+        }
+
+        // ECharts setup
+        var ordersChart = echarts.init(document.getElementById('ordersChart'));
+        var customersChart = echarts.init(document.getElementById('customersChart'));
+        var salesChart = echarts.init(document.getElementById('salesChart'));
+        var topCustomersChart = echarts.init(document.getElementById('topCustomersChart'));
+        var revenueChart = echarts.init(document.getElementById('revenueChart'));
+        var delayChart = echarts.init(document.getElementById('delayChart'));
+
+        function fetchDataAndUpdateCharts(period, startDate = null, endDate = null) {
+            let urlParams = `period=${period}`;
+            if (period === 'custom') {
+                urlParams += `&start_date=${startDate}&end_date=${endDate}`;
+            }
+
+            // Fetch orders data and render chart
+            fetch(`/get_orders_data_time?${urlParams}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Orders data per hour:", data);
+
+                    var ordersOption = {
+                        title: {
+                            text: 'عدد الطلبات لكل ساعة'
+                        },
+                        tooltip: {},
+                        xAxis: {
+                            type: 'category',
+                            data: ['12 صباحًا', '1 صباحًا', '2 صباحًا', '3 صباحًا', '4 صباحًا', '5 صباحًا', '6 صباحًا', '7 صباحًا', '8 صباحًا', '9 صباحًا', '10 صباحًا', '11 صباحًا', '12 ظهرًا', '1 مساءً', '2 مساءً', '3 مساءً', '4 مساءً', '5 مساءً', '6 مساءً', '7 مساءً', '8 مساءً', '9 مساءً', '10 مساءً', '11 مساءً']
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [{
+                            name: 'عدد الطلبات',
+                            type: 'bar',
+                            data: data
+                        }]
+                    };
+
+                    ordersChart.setOption(ordersOption);
+                })
+                .catch(error => console.error('Error fetching orders data:', error));
+
+            // Fetch order status data and render chart
+            fetch(`/get_orders_status_today?${urlParams}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Order status data:", data);
+
+                    var statusData = [
+                        { value: data.new || 0, name: 'طلب جديد' },
+                        { value: data.Done || 0, name: 'طلب تم تسليمه' },
+                        { value: data.Lost || 0, name: 'طلب ملغي', itemStyle: { color: 'red' } }
+                    ];
+
+                    var customersOption = {
+                        title: {
+                            text: 'حالة الطلبات'
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: '{a} <br/>{b} : {c} ({d}%)'
+                        },
+                        series: [{
+                            name: 'حالة الطلبات',
+                            type: 'pie',
+                            radius: '55%',
+                            center: ['50%', '60%'],
+                            data: statusData,
+                            emphasis: {
+                                itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }]
+                    };
+
+                    customersChart.setOption(customersOption);
+                })
+                .catch(error => console.error('Error fetching order status data:', error));
+
+            // Fetch top meals data and render chart
+            fetch(`/get_top_meals?${urlParams}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Top meals data:", data);
+
+                    var topMealsData = data.map(item => ({ value: item[1], name: item[0] }));
+
+                    var salesOption = {
+                        title: {
+                            text: 'أكثر 6 وجبات متكررة'
+                        },
+                        tooltip: {},
+                        series: [{
+                            name: 'عدد التكرارات',
+                            type: 'pie',
+                            radius: '55%',
+                            data: topMealsData
+                        }]
+                    };
+
+                    salesChart.setOption(salesOption);
+                })
+                .catch(error => console.error('Error fetching top meals data:', error));
+
+            // Fetch daily revenue and render gauge chart
+            fetch(`/get_daily_revenue?${urlParams}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Daily revenue data:", data);
+
+                    var revenueOption = {
+                        title: {
+                            text: 'أرباح'
+                        },
+                        tooltip: {
+                            formatter: '{a} <br/>{b} : {c} دينار'
+                        },
+                        series: [{
+                            name: 'الأرباح',
+                            type: 'gauge',
+                            detail: { formatter: '{value} دينار' },
+                            data: [{ value: 0, name: 'أرباح' }],
+                            max: 1000000
+                        }]
+                    };
+
+                    revenueChart.setOption(revenueOption);
+
+                    setTimeout(() => {
+                        revenueChart.setOption({
+                            series: [{
+                                data: [{ value: data, name: 'أرباح' }],
+                                animationDuration: 2000,
+                                animationEasing: 'cubicOut'
+                            }]
+                        });
+                    }, 500);
+                })
+                .catch(error => console.error('Error fetching daily revenue data:', error));
+
+            // Fetch top customers data and render chart
+            fetch(`/get_top_customers?${urlParams}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Top customers data:", data);
+
+                    var customerNames = data.map(item => item.name + ' (' + item.phone + ')');
+                    var customerOrders = data.map(item => item.orders);
+
+                    var topCustomersOption = {
+                        title: {
+                            text: 'أكثر الزبائن طلبًا  '
+                        },
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        },
+                        yAxis: {
+                            type: 'category',
+                            data: customerNames
+                        },
+                        xAxis: {
+                            type: 'value',
+                            boundaryGap: [0, 0.01]
+                        },
+                        series: [{
+                            name: 'عدد الطلبات',
+                            type: 'bar',
+                            data: customerOrders,
+                            itemStyle: {
+                                color: '#4caf50'
+                            }
+                        }]
+                    };
+
+                    topCustomersChart.setOption(topCustomersOption);
+                })
+                .catch(error => console.error('Error fetching top customers data:', error));
+
+                function timeStringToSeconds(timeString) {
+                    var timeParts = timeString.split(':');
+                    var seconds = (+timeParts[0]) * 60 * 60 + (+timeParts[1]) * 60 + (+timeParts[2]);
+                    return seconds;
+                }
+                
+                function fetchDataAndUpdateCharts(period, startDate = null, endDate = null) {
+                    let urlParams = `period=${period}`;
+                    if (period === 'custom') {
+                        urlParams += `&start_date=${startDate}&end_date=${endDate}`;
+                    }
+                }
+                
+                    // Fetch order tracking data and update table
+                    fetch(`/get_order_tracking?${urlParams}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                            var tableBody = document.getElementById('orderTrackingTable').getElementsByTagName('tbody')[0];
+                            tableBody.innerHTML = '';
+                            data.forEach(function(row) {
+                                var newRow = tableBody.insertRow();
+                                newRow.insertCell().innerText = row.ordercode || '';
+                                newRow.insertCell().innerText = row.orddrivename || '';
+                                newRow.insertCell().innerText = row.ordtracking || '';
+                                newRow.insertCell().innerText = row.time || '';
+                                newRow.insertCell().innerText = row.preparing_duration || '';
+
+                                var driverWaitCell = newRow.insertCell();
+                                driverWaitCell.innerText = row.driver_wait_duration || '';
+                                if (timeStringToSeconds(row.driver_wait_duration) > 600) {
+                                    driverWaitCell.classList.add('delay-warning');
+                                }
+
+                                var deliveryDurationCell = newRow.insertCell();
+                                deliveryDurationCell.innerText = row.delivery_duration || '';
+                                if (timeStringToSeconds(row.delivery_duration) > 600) {
+                                    deliveryDurationCell.classList.add('delay-warning');
+                                }
+
+                                newRow.insertCell().innerText = row.total_order_duration || '';
+
+                                if (row.statu === 'New') {
+                                    newRow.classList.add('new-order');
+                                } else if (row.statu === 'Lost') {
+                                    newRow.classList.add('lost-order');
+                                } else if (row.statu === 'Done') {
+                                    newRow.classList.add('done-order');
+                                }
+                            });
+                        })
+                        .catch(error => console.error('Error fetching order tracking data:', error));
+
+                
+                
+
+
+
+            // Fetch delay statistics data and render chart
+            fetch(`/get_delay_statistics?${urlParams}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Delay statistics data:", data);
+
+                    var delayOption = {
+                        title: {
+                            text: 'نسب التأخير لكل مرحلة'
+                        },
+                        tooltip: {},
+                        xAxis: {
+                            type: 'category',
+                            data: ['مدة التحضير', 'مدة انتظار السائق', 'مدة التوصيل']
+                        },
+                        yAxis: {
+                            type: 'value',
+                            axisLabel: {
+                                formatter: function (value) {
+                                    var hours = Math.floor(value / 3600);
+                                    var minutes = Math.floor((value % 3600) / 60);
+                                    var seconds = value % 60;
+                                    return `${hours}h ${minutes}m ${seconds}s`;
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'نسبة التأخير',
+                            type: 'bar',
+                            data: [data.preparing_duration, data.driver_wait_duration, data.delivery_duration],
+                            itemStyle: {
+                                color: '#ff6f61'
+                            }
+                        }]
+                    };
+
+                    delayChart.setOption(delayOption);
+                })
+                .catch(error => console.error('Error fetching delay statistics data:', error));
+        }
+
+        document.getElementById('timePeriodSelect').addEventListener('change', function() {
+            var selectedPeriod = this.value;
+            if (selectedPeriod === 'custom') {
+                document.getElementById('customDateInputs').style.display = 'flex';
+            } else {
+                document.getElementById('customDateInputs').style.display = 'none';
+                fetchDataAndUpdateCharts(selectedPeriod);
+            }
+        });
+
+        document.getElementById('fetchCustomDateData').addEventListener('click', function() {
+            var startDate = document.getElementById('startDate').value;
+            var endDate = document.getElementById('endDate').value;
+            if (startDate && endDate) {
+                fetchDataAndUpdateCharts('custom', startDate, endDate);
+            } else {
+                alert('يرجى تحديد تاريخ البداية والنهاية.');
+            }
+        });
+        
+              
+
+        // جلب البيانات وتحديث المخططات عند تحميل الصفحة
+        fetchDataAndUpdateCharts('daily');
+    </script>
+</body>
+</html>

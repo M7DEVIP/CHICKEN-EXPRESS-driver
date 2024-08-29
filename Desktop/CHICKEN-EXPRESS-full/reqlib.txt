@@ -1,0 +1,17 @@
+Flask
+pytz
+requests
+mysql-connector-python
+fpdf
+arabic-reshaper
+python-bidi
+beautifulsoup4
+pandas
+openpyxl
+werkzeug
+flask-wtf
+flask-limiter
+python-decouple
+python-dotenv
+waitress
+flask-caching

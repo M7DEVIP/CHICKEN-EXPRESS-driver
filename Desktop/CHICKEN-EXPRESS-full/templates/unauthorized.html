@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنبيه - صلاحيات غير كافية</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+        }
+        .alert-container {
+            max-width: 600px;
+            width: 100%;
+            margin: auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #ffffff;
+            position: relative;
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .alert {
+            border: none;
+            border-radius: 0;
+            background-color: #ffeded;
+            padding: 20px;
+            position: relative;
+        }
+        .alert-heading {
+            font-size: 1.75rem;
+            color: #d9534f;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        .alert-heading svg {
+            margin-right: 10px;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        .alert p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .mb-0 {
+            text-align: right;
+        }
+        .mb-0 a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .mb-0 a:hover {
+            text-decoration: underline;
+        }
+        .alert::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ff6b6b, #d9534f);
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-container">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+                    <path d="M7.938 2.016a1.13 1.13 0 0 1 .708 0l6.854 2.458a1.13 1.13 0 0 1 .55 1.678l-5.264 9.123c-.386.67-1.452.67-1.838 0L.95 6.152a1.13 1.13 0 0 1 .55-1.678L7.938 2.016zM8 1a2.13 2.13 0 0 0-1.33.448l-6.853 2.458A2.13 2.13 0 0 0 .002 6.83L5.266 15.95c.773 1.339 2.732 1.339 3.505 0L14.95 6.83a2.13 2.13 0 0 0-.335-2.904L7.33 1.448A2.13 2.13 0 0 0 8 1zM7.002 4a.987.987 0 1 1 2-.002.987.987 0 0 1-2 .002zM7.002 6a.987.987 0 0 1 1 0v4.017a.987.987 0 0 1-1 0V6zm0 6.002a.987.987 0 1 1 1-.002.987.987 0 0 1-1 .002z"/>
+                </svg>
+                صلاحيات غير كافية
+            </h4>
+            <p>ليس لديك الصلاحيات للوصول إلى هذه الصفحة. يرجى الاتصال بالمسؤول إذا كنت تعتقد أن هذه رسالة خاطئة.</p>
+            <hr>
+            <p class="mb-0"><a href="{{ url_for('home') }}">العودة إلى الصفحة الرئيسية</a></p>
+        </div>
+    </div>
+</body>
+</html>

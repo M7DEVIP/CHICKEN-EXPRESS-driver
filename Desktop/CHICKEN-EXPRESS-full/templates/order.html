@@ -1,0 +1,3615 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>CHICKEN EXPRESS Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* الكود أعلاه هنا */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .employee-name {
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .navbar-options {
+            display: flex;
+        }
+
+        .navbar-option {
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .home-btn-nav {
+            font-weight: bold;
+        }
+
+        .search-box-order {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 72px;
+        }
+
+        .search-input-order {
+            width: 400px;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding-left: 20px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-input-order:focus {
+            border-color: #007bff;
+        }
+
+        .search-box-order i {
+            margin-left: -30px;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin: 20px;
+        }
+
+        .card-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-info {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-info i {
+            margin-right: 10px;
+        }
+
+        .phone-icon {
+            color: #5cb85c;
+        }
+
+        .name-icon {
+            color: #f0ad4e;
+        }
+
+        .order-icon {
+            color: #d9534f;
+        }
+
+        .address-icon {
+            color: #5bc0de;
+        }
+
+        .date-icon {
+            color: #f7a35c;
+        }
+
+        .time-icon {
+            color: #f15c80;
+        }
+
+        .status-icon {
+            color: #7cb5ec;
+        }
+
+        .zone-icon {
+            color: #90ed7d;
+        }
+
+        .discount-icon {
+            color: #434348;
+        }
+
+        .employee-icon {
+            color: #8085e9;
+        }
+
+        .cost-icon {
+            color: #f45b5b;
+        }
+
+        .driver-icon {
+            color: #91e8e1;
+        }
+
+        .note-icon {
+            color: #f7a35c;
+        }
+
+        .track-icon {
+            color: #007bff;
+        }
+
+        /* تحديث أيقونة التتبع حسب الحالة */
+        .card[data-status="قيد التجهيز"] .tracking-icon::before {
+            content: "\f0f5"; /* أيقونة قدر الطبخ */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #f39c12;
+        }
+
+        .card[data-status="تم التجهيز"] .tracking-icon::before {
+            content: "\f0d1"; /* أيقونة صندوق جاهز للشحن */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #27ae60;
+        }
+
+        .card[data-status="جار التسليم"] .tracking-icon::before {
+            content: "\f5b0"; /* أيقونة شاحنة */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #e67e22;
+        }
+
+        .card[data-status="تم التوصيل"] .tracking-icon::before {
+            content: "\f058"; /* أيقونة صح دائرية */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #2ecc71;
+        }
+
+        .card-note {
+            margin-top: 10px;
+            color: #888;
+        }
+
+        .card-buttons {
+            display: inline-flex;
+        }
+
+        .edit-button, .request-button {
+            padding: 5px 10px;
+            background-color: transparent;
+            border: 1px solid #007bff;
+            color: #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .edit-button:hover, .request-button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 40%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        #customer-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .modal-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #save-changes-button, #save-new-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #save-changes-button:hover, #save-new-button:hover {
+            background-color: #45a049;
+        }
+
+        .select-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .select-wrapper select {
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .select-wrapper::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #888;
+            pointer-events: none;
+        }
+
+        .card-add-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .card-add-button i {
+            font-size: 60px;
+            color: #007bff;
+        }
+
+        .menu-container-han {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+            padding-top: 60px;
+        }
+
+        nav {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px 20px;
+            background-color: #28a74596;
+            border: 1px solid #28a745;
+            border-radius: 11px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            margin-right: -18px;
+        }
+
+        nav a:hover {
+            background-color: #218838;
+            color: #ffffff;
+        }
+
+        .restaurant-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            padding-bottom: 75px;
+            padding-left: 152px;
+        }
+
+        .menu-category {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .menu-item {
+            text-align: center;
+            width: 250px;
+            margin: 20px;
+        }
+
+        .item-image img {
+            width: 188px;
+            height: 154px;
+            object-fit: cover;
+            border-radius: 20%;
+        }
+
+        .item-details {
+            margin-top: 10px;
+        }
+
+        .item-details h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .item-details p {
+            margin: 0;
+        }
+
+        .add-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .quantity {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quantity-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #order-summary {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 244px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 90%;
+            overflow: scroll;
+        }
+
+        #order-summary h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        #order-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+        }
+
+        #order-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #total-price {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+        }
+
+        #total-price span {
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        #confirm-order-button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #confirm-order-edit-button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #confirm-order-button:hover {
+            background-color: #218838;
+        }
+
+        /* CSS للنموذج العائم */
+        #order-form, #edit-order-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        #order-form h2, #edit-order-form h2 {
+            margin-top: 0;
+            font-size: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        #order-form label, #edit-order-form label {
+            display: block;
+            margin-bottom: 2px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #order-form input,
+        #order-form textarea,
+        #edit-order-form input,
+        #edit-order-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        #order-form input:focus,
+        #order-form textarea:focus,
+        #edit-order-form input:focus,
+        #edit-order-form textarea:focus {
+            border-color: #007bff;
+            background-color: #fff;
+        }
+
+        #order-form button[type="submit"],
+        #edit-order-form button[type="submit"],
+        #close-form-button,
+        #close-edit-form-button {
+            width: calc(50% - 10px);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #order-form button[type="submit"],
+        #edit-order-form button[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #order-form button[type="submit"]:hover,
+        #edit-order-form button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        #close-form-button,
+        #close-edit-form-button {
+            background-color: #ff6b6b;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        #close-form-button:hover,
+        #close-edit-form-button:hover {
+            background-color: #e63946;
+        }
+
+        #order-details,
+        #edit-order-details {
+            resize: none;
+            height: 100px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        #close-form-button {
+            background-color: #dd761b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #close-form-button:hover {
+            background-color: #e8b20e;
+        }
+
+        #close-form-button i {
+            margin-left: 5px;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        .export-adata {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .export-adata-btn {
+            display: block;
+            background-color: #007bff;
+            border-radius: 5px;
+            padding: 10px 20px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            margin: 20px auto;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .export-adata-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .chckph-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .chckph-modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            max-height: 90%;
+            top: -127px;
+            position: fixed;
+            right: 427px;
+        }
+
+        .chckph-close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: fixed;
+            top: 113px;
+        }
+
+        .chckph-close:hover,
+        .chckph-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .chckph-form-group {
+            margin-bottom: 15px;
+        }
+
+        .chckph-form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .chckph-form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chckph-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .chckph-button:hover {
+            background-color: #0056b3;
+        }
+
+        .add-ord-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-ord-button:hover {
+            background-color: #0056b3;
+        }
+
+        #chckph-result {
+            margin-top: 20px;
+        }
+
+        .chckph-form {
+            direction: rtl;
+        }
+
+        .form-order-select {
+            width: 96%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-order-select:focus {
+            border-color: #5cb85c;
+        }
+
+        .ediOrdrtextar {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .editOrderClose {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 7px;
+            cursor: pointer;
+        }
+
+        .editOrder-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        #track-sub-buttons {
+            display: flex;
+        }
+
+        .track-update-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #007bff;
+            font-size: 21px;
+            margin-left: 178px;
+            display: flex;
+            align-items: center;
+        }
+
+        .track-update-button:hover {
+            color: #0056b3;
+        }
+
+        .truk-floating-window {
+            display: none; /* مخفي افتراضيًا */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 141px;
+            padding: 20px;
+        }
+
+        .truk-window-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .truk-window-header span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .truk-close-button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .truk-action-button {
+            display: flex;
+            align-items: center;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            font-size: 16px;
+            width: 127px;
+        }
+
+        .truk-action-button i {
+            margin-right: 10px;
+        }
+
+        .truk-action-button:hover {
+            background-color: #0056b3;
+        }
+
+        #truk-lost-comment textarea,
+        #truk-driver-name input {
+            width: 100%;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        #truk-lost-comment button,
+        #truk-driver-name button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .order-filter-container {
+            margin-bottom: -21px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            margin-right: -903px;
+        }
+        
+        .order-filter-button {
+            padding: 8px 9px;
+            font-size: 13px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            margin: 0 5px;
+            cursor: pointer;
+            width: 88px;
+            height: 33px;
+        }
+        
+        .order-filter-button:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .order-filter-button.active {
+            border-color: #007bff;
+            background-color: #007bff;
+            color: #fff;
+        }
+        
+
+        .icon-preparing {
+            color: #f0ad4e; /* لون يدل على التجهيز */
+        }
+
+        .icon-ready {
+            color: #5bc0de; /* لون يدل على الجاهزية */
+        }
+
+        .icon-delivering {
+            color: #f7a35c; /* لون يدل على التسليم */
+        }
+
+        .icon-delivered {
+            color: #5cb85c; /* لون يدل على التوصيل */
+        }
+
+        .hidden-buttons,
+        .hidden-sub-buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .truk-action-button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 11px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 85px;
+        }
+        
+        .prepared-button {
+            background-color: #5bc0de;
+            color: #fff;
+        }
+        
+        .prepared-button:hover {
+            background-color: #31b0d5;
+        }
+        
+        .indelivery-button {
+            background-color: #f7a35c;
+            color: #fff;
+        }
+        
+        .indelivery-button:hover {
+            background-color: #f08c3a;
+        }
+        
+        .delivered-button {
+            background-color: #5cb85c;
+            color: #fff;
+        }
+        
+        .delivered-button:hover {
+            background-color: #4cae4c;
+        }
+        
+        .truk-action-button.cancelled-by-customer {
+            background-color: #cd9c8c;
+        }
+        
+        .truk-action-button.cancelled-before-delivery {
+            background-color: #5cbf0a;
+        }
+        
+        .truk-action-button.cancelled-due-to-delay {
+            background-color: #d9534f;
+        }
+        
+        .truk-action-button.accident-and-redirect {
+            background-color: #f27419;
+        }
+        
+        .truk-action-button i {
+            margin-right: 5px;
+        }
+        
+        .truk-action-button:hover,
+        .truk-action-button.active {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        #truk-lost-comment-text,
+        #truk-driver-name-text {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+            transition: box-shadow 0.2s;
+        }
+        
+        #truk-lost-comment-text:focus,
+        #truk-driver-name-text:focus {
+            box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+        
+        #truk-submit-lost-comment,
+        #truk-submit-accident-driver-name {
+            background-color: #5cbf0a;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        #truk-submit-lost-comment:hover,
+        #truk-submit-accident-driver-name:hover {
+            background-color: #4e9e08;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        #truk-submit-lost-comment:active,
+        #truk-submit-accident-driver-name:active {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #status-sub-buttons {
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+
+
+        .sidebar {
+            width: 73px;
+            background-color: transparent;
+            padding-top: 72px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 46px;
+            bottom: 0;
+            z-index: 0;
+        }
+        
+        .sidebar-button {
+            width: 90%;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            background-color: #4497ef8a;
+        }
+        
+        .sidebar-button:hover {
+            background-color: #e9ecef;
+        }
+        
+        .sidebar-button i {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .sidebar-button span {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .status-count {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            margin-left: -48px;
+        }
+
+        .sidebar-button[data-status="قيد التجهيز"] {
+            background-color: #AEB7FF; /* لون يعبر عن حالة "قيد التجهيز" */
+        }
+        
+        .sidebar-button[data-status="تم التجهيز"] {
+            background-color: #5BC0DE; /* لون يعبر عن حالة "تم التجهيز" */
+        }
+        
+        .sidebar-button[data-status="جار التسليم"] {
+            background-color: #F7A35C; /* لون يعبر عن حالة "جار التسليم" */
+        }
+        
+        .sidebar-button[data-status="تم التوصيل"] {
+            background-color: #90EE90; /* لون يعبر عن حالة "تم التوصيل" */
+        }
+
+        .cancel-icon {
+            color: red;
+            font-size: 24px; /* يمكنك تغيير حجم الأيقونة حسب الحاجة */
+        }
+
+        button[disabled] {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .loading-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .loading-message .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #fff;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hidden-buttons, .hidden-sub-buttons {
+            display: none;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .new-order-status-button {
+            background-color: #f52e2e91;
+            padding: 5px;
+            border-radius: 8px;
+            width: 84px;
+            height: 45px;
+            border: 0px;
+        }
+
+        .new-track-order-button {
+            background-color: #1ad2ea7a;
+            padding: 5px;
+            border-radius: 8px;
+            width: 84px;
+            height: 45px;
+            border: 0px;
+        }
+
+        .print-button-container {
+            display: flex;
+            justify-content: right;
+            margin-top: 10px;
+        }
+        
+        .print-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #007bff;
+            font-size: 24px;
+        }
+        
+        .print-button i {
+            font-size: 24px;
+        }
+        
+        .print-button:hover {
+            color: #0056b3;
+        }
+
+
+        .new-order-status-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .new-track-order-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .new-print-order-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .track-sub-buttons {
+            display: flex;
+            flex-wrap: wrap; /* لإعادة ترتيب الأزرار في حالة صغر الشاشة */
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        
+        .driver-name-box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        .driver-name-box input {
+            margin-bottom: 5px;
+            width: 100%;
+        }
+        
+        .driver-name-box button {
+            width: 100%;
+        }
+
+        // الشكل الثاني 
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .card-info {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-info i {
+            margin-right: 10px;
+        }
+        
+        .card-info span {
+            font-size: 16px;
+        }
+        
+        .card-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .edit-button, .request-button {
+            padding: 5px 15px;
+            background-color: transparent;
+            border: 2px solid #007bff;
+            color: #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .edit-button:hover, .request-button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 15px;
+            width: 40%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: black;
+        }
+        
+        #customer-form input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        
+        #customer-form input[type="text"]:focus {
+            border-color: #007bff;
+        }
+        
+        #save-changes-button, #save-new-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        #save-changes-button:hover, #save-new-button:hover {
+            background-color: #45a049;
+        }
+        
+        .select-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .select-wrapper select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .select-wrapper::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #888;
+            pointer-events: none;
+        }
+        
+        .card-add-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .card-add-button i {
+            font-size: 60px;
+            color: #007bff;
+        }
+        
+        .hidden-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+            margin-bottom: 1px;
+        }
+    
+        
+        .new-order-status-button:hover, .new-track-order-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        
+        
+        .truk-action-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hidden-sub-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .customer-info, .order-details, .status-tracking, .additional-info {
+            margin-bottom: 8px;
+            border: 1px solid #efefef;
+            padding: 5px;
+        }
+
+        .card.border-preparing {
+             /* لون البرتقالي الفاتح */
+            border: 2px solid #AEB7FF;
+        }
+        
+        .card.border-ready {
+             /* لون الأزرق الفاتح */
+            border: 2px solid #5BC0DE;
+        }
+        
+        .card.border-delivering {
+             /* لون الأخضر الفاتح */
+            border: 2px solid #F7A35C;
+        }
+        
+        .card.border-delivered {
+         /* لون الأرجواني الفاتح */
+            border: 2px solid #5CB85C;
+        }
+
+        .shift-toggle-buttons {
+            display: flex;
+            align-items: center;
+            margin-right: 694px;
+        }
+        
+        .shift-toggle-button {
+            margin: 0 5px;
+            padding: 3px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #444;
+            border: none;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .shift-toggle-button i {
+            margin-right: 5px;
+        }
+        
+        .shift-toggle-button.active {
+            background-color: #5cb85c;
+            color: white; /* اختياري: لتغيير لون النص عند تنشيط الزر */
+        }
+        
+        
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="employee-name">
+            {{ username }}
+        </div>
+        <input type="hidden" id="csrf_token" value="{{ csrf_token() }}">
+        <div class="navbar-options">
+            <div class="shift-toggle-buttons">
+                <button id="shift-both" class="shift-toggle-button" onclick="updateShift('both')">
+                    <i class="fas fa-globe"></i> All
+                </button>
+                <button id="shift-morning" class="shift-toggle-button" onclick="updateShift('morning')">
+                    <i class="fas fa-sun"></i> Morning
+                </button>
+                <button id="shift-evening" class="shift-toggle-button" onclick="updateShift('evening')">
+                    <i class="fas fa-moon"></i> Evening
+                </button>
+            </div>                
+            <button id="direct-menu-nav" class="add-ord-button" style="margin-right: 20px;background-color: #5cb85c;">Open Menu</button>
+            <button id="chckph-makeOrderPhone-nav" class="add-ord-button">Make Order</button>
+            
+            <div class="navbar-option" onclick="redirectAdmin()">
+                Admin
+            </div>
+    
+            <div class="navbar-option">
+                Menu
+            </div>
+            <div class="navbar-option" onclick="redirectToCustomer()">
+                Customers
+            </div>
+            <div class="navbar-option home-btn-nav" onclick="redirectToHome()">
+                Home
+            </div>
+        </div>
+    </div>
+
+<!-- Sidebar for status buttons -->
+<div class="sidebar">
+    <div class="sidebar-button" data-status="قيد التجهيز" style="background-color: #AEB7FF;">
+        <i class="fas fa-hourglass-half"></i>
+        <span>قيد التجهيز</span>
+        <div class="status-count">0</div>
+    </div>
+    <div class="sidebar-button" data-status="تم التجهيز" style="background-color: #5BC0DE;">
+        <i class="fas fa-box"></i>
+        <span>تم التجهيز</span>
+        <div class="status-count">0</div>
+    </div>
+    <div class="sidebar-button" data-status="جار التسليم" style="background-color: #F7A35C;">
+        <i class="fas fa-truck"></i>
+        <span>جار التسليم</span>
+        <div class="status-count">0</div>
+    </div>
+    <div class="sidebar-button" data-status="تم التوصيل" style="background-color: #5CB85C;">
+        <i class="fas fa-check-circle"></i>
+        <span>تم التوصيل</span>
+        <div class="status-count">0</div>
+    </div>
+
+    <div class="sidebar-button" data-status="all" style="background-color: #FFD700;">
+        <i class="fas fa-list"></i>
+        <span>الكل</span>
+        <div class="status-count">0</div>
+    </div>
+</div>
+
+
+<div class="main-content">
+
+
+    <div class="search-box-order">
+        <input type="text" class="search-input-order" placeholder="Find order">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <div class="order-filter-container">
+        <button id="new-orders-button" class="order-filter-button">New Orders</button>
+        <button id="all-orders-button" class="order-filter-button">All Orders</button>
+    </div>
+    
+
+    <div class="card-container" id="orders-container">
+        {% for order in order_data %}
+        {% if order.name or order.phone or order.order or order.address or order.note or order.status or order.zone or order.discount or order.employee_name or order.total_cost %}
+        <div class="card" data-status="{{ order.status }}" data-tracking="{{ order.tracking }}">
+            <div class="card-header">
+                <span class="customer-name">{{ order.ordercode }}</span>
+                <div class="card-buttons">
+                    {% if order.status == "new" %}
+                    <button id="edit-ordercard-button" class="edit-button" data-ordercode="{{ order.ordercode }}">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="hidden-buttons">
+                <button class="new-order-status-button" id="new-order-status-{{ order.ordercode }}" onclick="toggleSubButtons('status', '{{ order.ordercode }}')">
+                    <i class="fas fa-info-circle"></i> الغاء الطلب 
+                </button>
+                <button class="new-track-order-button" id="new-track-order-{{ order.ordercode }}" onclick="toggleSubButtons('track', '{{ order.ordercode }}')">
+                    <i class="fas fa-truck"></i> تتبع الطلب
+                </button>                
+            </div>
+            
+            <div id="status-sub-buttons-{{ order.ordercode }}" class="hidden-sub-buttons" style="display: none;">
+                <button class="truk-action-button status-option cancelled-by-customer" data-status="Lost" data-reason="إلغاء من الزبون" onclick="handleStatusChange('{{ order.ordercode }}', this)"><i class="fas fa-user-times"></i> إلغاء من الزبون</button>
+                    <button class="truk-action-button status-option cancelled-before-delivery" data-status="Lost" data-reason="إلغاء قبل خروج السائق" onclick="handleStatusChange('{{ order.ordercode }}', this)"><i class="fas fa-times-circle"></i> إلغاء قبل خروج السائق</button>
+                <button class="truk-action-button status-option cancelled-due-to-delay" data-status="Lost" data-reason="إلغاء بسبب التأخير" onclick="handleStatusChange('{{ order.ordercode }}', this)"><i class="fas fa-hourglass-end"></i> إلغاء بسبب التأخير</button>
+                <button class="truk-action-button status-option accident-and-redirect" data-status="Lost" data-reason="حادث وجار تحويل الطلب" onclick="handleStatusChange('{{ order.ordercode }}', this)"><i class="fas fa-exclamation-triangle"></i> حادث وجار تحويل الطلب</button>
+            
+                <input type="hidden" id="cancelReason" name="cancelReason" value="">
+                <div id="truk-lost-comment-{{ order.ordercode }}" style="display: none; margin-top: 10px;">
+                    <textarea id="truk-lost-comment-text-{{ order.ordercode }}" placeholder="يرجى ترك تعليق...">لا يوجد</textarea>
+                    <button class="truk-action-button" id="truk-submit-lost-comment-{{ order.ordercode }}" onclick="submitLostComment('{{ order.ordercode }}')">إرسال</button>
+                </div>
+                <div id="truk-accident-driver-name-{{ order.ordercode }}" style="display: none; margin-top: 10px;">
+                    <input id="truk-new-driver-name-text-{{ order.ordercode }}" type="text" placeholder="يرجى إدخال اسم السائق الجديد...">
+                    <button class="truk-action-button" id="truk-submit-accident-driver-name-{{ order.ordercode }}" onclick="submitAccidentDriverName('{{ order.ordercode }}')">إرسال</button>
+                </div>
+            </div>
+    
+            <div id="track-sub-buttons-{{ order.ordercode }}" class="track-sub-buttons">
+                <button class="truk-action-button track-option prepared-button" data-status="Prepared" onclick="updateOrderTracking('{{ order.ordercode }}', 'Prepared', '')">
+                    <i class="fas fa-box"></i> تم التجهيز
+                </button>
+                <button class="truk-action-button track-option indelivery-button" data-status="InDelivery" onclick="toggleDriverNameInput('{{ order.ordercode }}')">
+                    <i class="fas fa-truck"></i> جار التسليم
+                </button>
+                <button class="truk-action-button track-option delivered-button" data-status="Delivered" onclick="updateOrderTracking('{{ order.ordercode }}', 'Delivered', '')">
+                    <i class="fas fa-check-circle"></i> تم التوصيل
+                </button>
+                <div id="truk-driver-name-{{ order.ordercode }}" class="driver-name-box" style="display: none;">
+                    <input id="truk-driver-name-text-{{ order.ordercode }}" type="text" placeholder="يرجى إدخال اسم السائق...">
+                    <button class="truk-action-button" onclick="submitDriverName('{{ order.ordercode }}')">إرسال</button>
+                </div>
+            </div>
+            
+            <div class="card-content">
+                <div class="customer-info">
+                    {% if order.phone %}
+                    <div class="card-info">
+                        <i class="fas fa-phone phone-icon"></i>
+                        <span>{{ order.phone }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.name %}
+                    <div class="card-info">
+                        <i class="fas fa-user name-icon"></i>
+                        <span>{{ order.name }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.address %}
+                    <div class="card-info">
+                        <i class="fas fa-map-marker-alt address-icon"></i>
+                        <span data-address="{{ order.address }}">{{ order.address_description }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.zone %}
+                    <div class="card-info">
+                        <i class="fas fa-route zone-icon"></i>
+                        <span>{{ order.zone }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+    
+                <div class="order-details">
+                    {% if order.order %}
+                        <div class="card-info">
+                            <i class="fas fa-utensils order-icon"></i>
+                            <span>
+                                {% for meal in order.order.split('|') %}
+                                    {{ meal }}<br>
+                                {% endfor %}
+                            </span>
+                        </div>
+                    {% endif %}
+
+
+                    {% if order.date %}
+                    <div class="card-info">
+                        <i class="far fa-calendar date-icon"></i>
+                        <span>{{ order.date }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.time %}
+                    <div class="card-info">
+                        <i class="far fa-clock time-icon"></i>
+                        <span>{{ order.time }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.discount %}
+                    <div class="card-info">
+                        <i class="fas fa-percentage discount-icon"></i>
+                        <span>{{ order.discount }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.total_cost %}
+                    <div class="card-info">
+                        <i class="fas fa-dollar-sign cost-icon"></i>
+                        <span>{{ order.total_cost }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+    
+                <div class="status-tracking">
+                    {% if order.status %}
+                    <div class="card-info">
+                        <i class="fas fa-info-circle status-icon"></i>
+                        <span>{{ order.status }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.tracking %}
+                    <div class="card-info">
+                        <i class="tracking-icon fas"></i>
+                        <span>{{ order.tracking }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.driver_name %}
+                    {% if order.tracking == 'جار التسليم' or order.tracking == 'تم التوصيل' %}
+                    <div class="card-info">
+                        <i class="fas fa-motorcycle driver-icon"></i>
+                        <span>{{ order.driver_name }}</span>
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                </div>
+    
+                <div class="additional-info">
+                    {% if order.employee_name %}
+                    <div class="card-info">
+                        <i class="fas fa-user-tie employee-icon"></i>
+                        <span>{{ order.employee_name }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.note %}
+                    <div class="card-info">
+                        <i class="fas fa-sticky-note note-icon"></i>
+                        <span>{{ order.note }}</span>
+                    </div>
+                    {% endif %}
+                    {% if order.wlost %}
+                    <div class="card-info">
+                        <i class="fas fa-times cancel-icon"></i>
+                        <span>{{ order.wlost }}</span>
+                    </div>
+                    {% endif %}
+                    <div class="print-button-container">
+                        <button class="print-button" id="new-print-order-{{ order.ordercode }}" onclick="printOrder('{{ order.ordercode }}')">
+                            <i class="fas fa-print"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}    
+    
+        <div class="card" style="cursor: pointer;" id="chckph-makeOrderPhone">
+            <div class="card-header">
+                <div class="card-add-button">
+                    <i class="fas fa-plus add-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- edit form-->
+    <div class="menu-container-han" id="menu-container-han">
+        <nav>
+            <a href="#main-dishes">الوجبات الرئيسية</a>
+            <a href="#snacks">الوجبات الخفيفة</a>
+            <a href="#appetizers">المقبلات</a>
+            <a href="#beverages">المشروبات</a>
+        </nav>
+
+        <div id="order-summary">
+            <h2>الطلب</h2>
+            <ul id="order-list"></ul>
+            <p id="total-price">السعر الإجمالي: <span>0</span> دينار</p>
+            <button id="confirm-order-button">تأكيد الطلب</button>
+            <button id="confirm-order-edit-button" class="hidden">تأكيد تعديل الطلب</button>
+        </div>
+
+        <div class="overlay hidden" id="form-overlay"></div>
+
+        <form id="order-form" class="hidden" action="/make-order" method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <h2>تأكيد الطلب</h2>
+            <label for="order-details">تفاصيل الطلب:</label>
+            <textarea id="order-details" name="order-details" readonly rows="5"></textarea>
+        
+            <label for="zone">اختر المنطقة:</label>
+            <select id="zone" name="zone" class="form-order-select" required>
+                <option value="داخل الزون">داخل الزون</option>
+                <option value="خارج الزون">خارج الزون</option>
+            </select>
+        
+            <label for="discount">اختر نسبة الخصم:</label>
+            <select id="discount" name="discount" class="form-order-select">
+                <option value="0%">لا يوجد خصم</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="50%">50%</option>
+            </select>
+        
+            <label for="phone">رقم الهاتف:</label>
+            <input type="text" id="phone" name="phone" required>
+        
+            <label for="address">العنوان:</label>
+            <div style="display: flex; align-items: center;">
+                <input type="text" id="address" name="address" required style="flex: 1;">
+                <button id="location-button" type="button" style="background-color: transparent; border: none; cursor: pointer; margin-left: 10px;">
+                    <i class="fas fa-map-marker-alt" style="color: #007bff; font-size: 1.5em;"></i>
+                </button>
+                <input type="text" id="address-description" name="address-description" placeholder="وصف العنوان" required style="flex: 1; margin-left: 10px;">
+            </div>
+        
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name">
+        
+            <label for="notes">ملاحظات:</label>
+            <textarea id="notes" name="notes"></textarea>
+        
+            <input type="text" id="total-price-input" name="total-price" style="position: fixed;top: 45px;right: 2px;width: 150px;background-color: transparent;border: transparent;color: #15a210;">
+        
+            <button type="submit">إرسال الطلب</button>
+            <button type="button" id="close-form-button"><i class="fas fa-arrow-right"></i> تعديل الطلب</button>
+        </form>
+        
+
+        <!-- إضافة فورم تعديل الطلب هنا -->
+        <form id="edit-order-form" class="hidden">
+            <h2>تعديل الطلب</h2>
+            <label for="edit-order-details">تفاصيل الطلب:</label>
+            <textarea id="edit-order-details" name="edit-order-details" readonly rows="5"></textarea>
+
+            <label for="edit-zone">اختر المنطقة:</label>
+            <select id="edit-zone" name="edit-zone" class="form-order-select" required>
+                <option value="داخل الزون">داخل الزون</option>
+                <option value="خارج الزون">خارج الزون</option>
+            </select>
+
+            <label for="edit-discount">اختر نسبة الخصم:</label>
+            <select id="edit-discount" name="edit-discount" class="form-order-select">
+                <option value="0%">لا يوجد خصم</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="50%">50%</option>
+            </select>
+
+            <label for="edit-phone">رقم الهاتف:</label>
+            <input type="text" id="edit-phone" name="edit-phone" required>
+
+            <label for="edit-address">العنوان:</label>
+            <input type="text" id="edit-address" name="edit-address" required>
+
+            <label for="edit-name">الاسم:</label>
+            <input type="text" id="edit-name" name="edit-name">
+
+            <label for="edit-notes">ملاحظات:</label>
+            <textarea id="edit-notes" name="edit-notes"></textarea>
+
+            <input type="text" id="edit-total-price-input" name="edit-total-price" style="position: fixed;top: 45px;right: 2px;width: 150px;background-color: transparent;border: transparent;color: #15a210;">
+
+            <button type="submit" id="submit-edit-order">إرسال التعديلات</button>
+            <button type="button" id="close-edit-form-button"><i class="fas fa-arrow-right"></i> تعديل الوجبات</button>
+        </form>
+
+        <div class="restaurant-menu">
+            <div class="menu-category">
+                <h2 id="main-dishes">الوجبات الرئيسية</h2>
+            </div>
+            {% for row in menu %}
+            {% if row[4] == 1 and row[6] == "وجبة" %}
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="{{ url_for('static', filename=row[5]) }}" alt="{{ row[1] }}" loading="lazy">
+                </div>
+                <div class="item-details">
+                    <h2>{{ row[1] }}</h2>
+                    <p>وصف: {{ row[2] }}</p>
+                    <p>سعر: {{ row[3] }} دينار</p>
+                    <button class="add-button" onclick="toggleAddButton(this)">إضافة</button>
+                    <div class="quantity hidden">
+                        <button class="quantity-button">-</button>
+                        <span>0</span>
+                        <button class="quantity-button">+</button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+    
+            <div class="menu-category">
+                <h2 id="snacks">الوجبات السريعة</h2>
+            </div>
+            {% for row in menu %}
+            {% if row[4] == 1 and row[6] == "سريعة" %}
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="{{ url_for('static', filename=row[5]) }}" alt="{{ row[1] }}" loading="lazy">
+                </div>
+                <div class="item-details">
+                    <h2>{{ row[1] }}</h2>
+                    <p>وصف: {{ row[2] }}</p>
+                    <p>سعر: {{ row[3] }} دينار</p>
+                    <button class="add-button" onclick="toggleAddButton(this)">إضافة</button>
+                    <div class="quantity hidden">
+                        <button class="quantity-button">-</button>
+                        <span>0</span>
+                        <button class="quantity-button">+</button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+    
+            <div class="menu-category">
+                <h2 id="appetizers">المقبلات</h2>
+            </div>
+            {% for row in menu %}
+            {% if row[4] == 1 and row[6] == "مقبلات" %}
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="{{ url_for('static', filename=row[5]) }}" alt="{{ row[1] }}" loading="lazy">
+                </div>
+                <div class="item-details">
+                    <h2>{{ row[1] }}</h2>
+                    <p>وصف: {{ row[2] }}</p>
+                    <p>سعر: {{ row[3] }} دينار</p>
+                    <button class="add-button" onclick="toggleAddButton(this)">إضافة</button>
+                    <div class="quantity hidden">
+                        <button class="quantity-button">-</button>
+                        <span>0</span>
+                        <button class="quantity-button">+</button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+    
+            <div class="menu-category">
+                <h2 id="beverages">المشروبات</h2>
+            </div>
+            {% for row in menu %}
+            {% if row[4] == 1 and row[6] == "مشروب" %}
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="{{ url_for('static', filename=row[5]) }}" alt="{{ row[1] }}" loading="lazy">
+                </div>
+                <div class="item-details">
+                    <h2>{{ row[1] }}</h2>
+                    <p>وصف: {{ row[2] }}</p>
+                    <p>سعر: {{ row[3] }} دينار</p>
+                    <button class="add-button" onclick="toggleAddButton(this)">إضافة</button>
+                    <div class="quantity hidden">
+                        <button class="quantity-button">-</button>
+                        <span>0</span>
+                        <button class="quantity-button">+</button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="chckph-myModal" class="chckph-modal">
+        <div class="chckph-modal-content">
+            <span class="chckph-close">&times;</span>
+            <form id="chckph-phoneForm" class="chckph-form">
+                <div class="chckph-form-group">
+                    <label for="chckph-phone">رقم الهاتف:</label>
+                    <input type="text" id="chckph-phone" name="chckph-phone" required>
+                </div>
+                <button type="submit" class="chckph-button">إرسال</button>
+            </form>
+            <div id="chckph-result"></div>
+        </div>
+    </div>
+
+    <div id="editOrderForm" class="editOrder-modal">
+        <div class="chckph-modal-content">
+            <span class="editOrderClose">&times;</span>
+            <form id="editOrderDetails" class="chckph-form">
+                <div class="chckph-form-group">
+                    <label for="ediOrdrOrder">الطلب:</label>
+                    <textarea id="ediOrdrOrder" name="order" rows="3" readonly class="ediOrdrtextar"></textarea>
+                    <input type="hidden" id="edit-order-code" name="order_code" value="">
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrPhone">رقم الهاتف:</label>
+                    <input type="text" id="ediOrdrPhone" name="phone" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrName">الاسم:</label>
+                    <input type="text" id="ediOrdrName" name="name" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrAddress">العنوان:</label>
+                    <input type="text" id="ediOrdrAddress" name="address" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrNote">الملاحظة:</label>
+                    <input type="text" id="ediOrdrNote" name="note" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrZone">اختر المنطقة:</label>
+                    <select id="ediOrdrZone" name="zone" class="form-order-select">
+                        <option value="داخل الزون">داخل الزون</option>
+                        <option value="خارج الزون">خارج الزون</option>
+                    </select>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrDiscount">اختر نسبة الخصم:</label>
+                    <select id="ediOrdrDiscount" name="discount" class="form-order-select">
+                        <option value="0%">لا يوجد خصم</option>
+                        <option value="10%">10%</option>
+                        <option value="20%">20%</option>
+                        <option value="30%">30%</option>
+                        <option value="50%">50%</option>
+                    </select>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrEmployeeName">اسم الموظف:</label>
+                    <input type="text" id="ediOrdrEmployeeName" name="employee_name" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrTotalCost">السعر الإجمالي:</label>
+                    <input type="text" id="ediOrdrTotalCost" name="total_cost" readonly>
+                </div>
+                <div class="chckph-form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <button type="button" class="chckph-button" onclick="updateOrder()">تعديل الطلب</button>
+                        <button type="button" class="chckph-button" onclick="editMeals()">تعديل الوجبات</button>
+                    </div>
+                    <button type="button" class="chckph-button" onclick="printOrder()">
+                        <i class="fas fa-print"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const locationButton = document.getElementById("location-button");
+
+        // Function to continuously enable the button
+        function enableButton() {
+            locationButton.disabled = false;
+        }
+        setInterval(enableButton, 500);
+    });
+
+    document.getElementById('location-button').onclick = function() {
+        var width = 800;
+        var height = 600;
+        var left = (screen.width / 2) - (width / 2);
+        var top = (screen.height / 2) - (height / 2);
+        window.open('https://www.google.com/maps', 'Google Maps', 'width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+    };
+
+    function openGoogleMaps(lat, lon) {
+        var width = 800;
+        var height = 600;
+        var left = (screen.width / 2) - (width / 2);
+        var top = (screen.height / 2) - (height / 2);
+        var locationUrl = `https://www.google.com/maps?q=${lat},${lon}&hl=ar`;
+        window.open(locationUrl, 'Google Maps', 'width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+    }
+    
+    function handleMapIconClick(event) {
+        var spanElement = event.target.closest('.card-info').querySelector('span[data-address]');
+        if (spanElement) {
+            var coords = spanElement.getAttribute('data-address').trim();
+            var [lat, lon] = coords.split(',').map(coord => coord.trim());
+            openGoogleMaps(lat, lon);
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var mapIcons = document.querySelectorAll('.address-icon, .card-info span');
+        mapIcons.forEach(icon => {
+            icon.addEventListener('click', handleMapIconClick);
+        });
+    });
+    
+
+    var userLevel = "{{ user_level }}";
+    console.log(userLevel);
+
+    if (userLevel === 'viewer') {
+        document.getElementById('direct-menu-nav').style.display = 'none';
+        document.getElementById('chckph-makeOrderPhone').style.display = 'none';
+        document.getElementById('chckph-makeOrderPhone-nav').style.display = 'none';
+        var elements = document.getElementsByClassName('hidden-buttons');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'none';
+        }
+
+        var elements = document.getElementsByClassName('track-sub-buttons');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'none';
+        }
+
+        var elements = document.getElementsByClassName('edit-button');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'none';
+        }
+
+        var elements = document.getElementsByClassName('print-button');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'none';
+        }
+
+        document.querySelector('.card-add-button').style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        function updateOrderCounts(shift) {
+            if (!shift) {
+                console.error('Shift is undefined or null');
+                return;
+            }
+            fetch(`/get_orders_count_by_tracking?shift=${shift}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Order Counts:', data); // تسجيل البيانات المستلمة للتأكد منها
+                    document.querySelector('.sidebar-button[data-status="قيد التجهيز"] .status-count').textContent = data['قيد التجهيز'] || 0;
+                    document.querySelector('.sidebar-button[data-status="تم التجهيز"] .status-count').textContent = data['تم التجهيز'] || 0;
+                    document.querySelector('.sidebar-button[data-status="جار التسليم"] .status-count').textContent = data['جار التسليم'] || 0;
+                    document.querySelector('.sidebar-button[data-status="تم التوصيل"] .status-count').textContent = data['تم التوصيل'] || 0;
+    
+                    // حساب الكل
+                    const totalOrders = Object.values(data).reduce((sum, count) => sum + (count || 0), 0);
+                    document.querySelector('.sidebar-button[data-status="all"] .status-count').textContent = totalOrders;
+                })
+                .catch(error => console.error('Error fetching order counts:', error));
+        }
+    
+        function updateShift(shift) {
+            if (!shift) {
+                console.error('Shift is undefined or null');
+                return;
+            }
+            console.log('Selected shift:', shift); // تأكيد الشيفت المحدد
+            updateOrderCounts(shift);
+    
+            // تحديث URL دون إعادة تحميل الصفحة
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.set('shift', shift);
+            const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+            history.pushState(null, '', newUrl);
+    
+            // تحديث الأزرار لتحديد الزر النشط
+            document.querySelectorAll('.shift-toggle-button').forEach(button => {
+                if (button.id === `shift-${shift}`) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+    
+            // جلب الطلبات وتحديث المحتوى دون إعادة تحميل الصفحة
+            fetch(`/orderwin?shift=${shift}`)
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const newOrders = doc.querySelector('#orders-container').innerHTML;
+                    document.querySelector('#orders-container').innerHTML = newOrders;
+                })
+                .catch(error => console.error('Error updating orders:', error));
+        }
+    
+        // تحديث الأرقام عند تحميل الصفحة
+        const urlParams = new URLSearchParams(window.location.search);
+        const initialShift = urlParams.get('shift') || 'both';
+        console.log('Initial shift:', initialShift); // تأكيد الشيفت المبدئي
+        updateOrderCounts(initialShift);
+    
+        // تعيين الزر النشط عند تحميل الصفحة
+        document.querySelectorAll('.shift-toggle-button').forEach(button => {
+            if (button.id === `shift-${initialShift}`) {
+                button.classList.add('active');
+            }
+        });
+    
+        document.querySelectorAll('.shift-toggle-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const shift = this.id.replace('shift-', '');
+                console.log('Button clicked, shift:', shift); // تأكيد الشيفت من الزر
+                updateShift(shift);
+            });
+        });
+    
+    
+    
+    
+
+
+    
+
+    
+    
+    
+        document.querySelectorAll('.sidebar-button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const status = button.getAttribute('data-status');
+                localStorage.setItem('selectedSidebarStatus', status); // حفظ حالة الفلتر في السايد بار
+                if (status === 'تم التوصيل') {
+                    localStorage.setItem('selectedNewOrderStatus', 'all');
+                    setActiveButton(document.getElementById('all-orders-button'));
+                }
+                filterOrders();
+            });
+        });
+    
+        function filterOrders() {
+            const sidebarStatus = localStorage.getItem('selectedSidebarStatus') || 'all';
+            const newOrderStatus = localStorage.getItem('selectedNewOrderStatus') || 'all';
+            console.log(`Filtering orders with sidebar status: ${sidebarStatus} and new order status: ${newOrderStatus}`);
+            const cards = document.querySelectorAll('.card-container .card');
+            const statusClassMap = {
+                'قيد التجهيز': 'preparing',
+                'تم التجهيز': 'ready',
+                'جار التسليم': 'delivering',
+                'تم التوصيل': 'delivered'
+            };
+    
+            cards.forEach(function(card) {
+                const cardTrackingStatus = card.getAttribute('data-tracking');
+                const cardOrderStatus = card.getAttribute('data-status');
+                console.log(`Card tracking status: ${cardTrackingStatus}, card order status: ${cardOrderStatus}`);
+    
+                // إزالة جميع كلاس اللون أولاً
+                for (let key in statusClassMap) {
+                    card.classList.remove(`border-${statusClassMap[key]}`);
+                }
+    
+                if (cardOrderStatus === 'Lost') {
+                    card.style.display = 'none';
+                    console.log(`Card with status "Lost" display: none`);
+                } else if (sidebarStatus === 'all' || cardTrackingStatus === sidebarStatus) {
+                    if (newOrderStatus === 'all' || cardOrderStatus === newOrderStatus || newOrderStatus === 'new' && cardOrderStatus === 'new') {
+                        card.style.display = 'block';
+                        if (sidebarStatus !== 'all') {
+                            card.classList.add(`border-${statusClassMap[sidebarStatus]}`);
+                        }
+                        console.log(`Card with status "${cardTrackingStatus}" display: block`);
+                    } else {
+                        card.style.display = 'none';
+                        console.log(`Card with status "${cardTrackingStatus}" display: none`);
+                    }
+                } else {
+                    card.style.display = 'none';
+                    console.log(`Card with status "${cardTrackingStatus}" display: none`);
+                }
+            });
+        }
+    
+        function displayOrders(orders) {
+            const ordersContainer = document.querySelector('#orders-container');
+            ordersContainer.innerHTML = ''; // مسح المحتوى السابق
+    
+            orders.forEach(order => {
+                const orderElement = document.createElement('div');
+                orderElement.classList.add('card');
+                orderElement.setAttribute('data-tracking', order.statu);
+                orderElement.setAttribute('data-status', order.statu);
+                orderElement.textContent = `Order ID: ${order.id}, Status: ${order.statu}`;
+                ordersContainer.appendChild(orderElement);
+            });
+            console.log('Displayed Orders:', orders); // تسجيل الطلبات التي يتم عرضها للتأكد
+        }
+    
+        function restoreFilter() {
+            const savedSidebarStatus = localStorage.getItem('selectedSidebarStatus') || 'all';
+            const savedNewOrderStatus = localStorage.getItem('selectedNewOrderStatus') || 'new';
+    
+            filterOrders();
+            setActiveButton(document.querySelector(`.order-filter-button[data-status="${savedNewOrderStatus}"]`));
+            setSidebarButtonActive(document.querySelector(`.sidebar-button[data-status="${savedSidebarStatus}"]`));
+        }
+    
+        function setActiveButton(activeButton) {
+            const buttons = document.querySelectorAll('.order-filter-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        }
+    
+        function setSidebarButtonActive(activeButton) {
+            const buttons = document.querySelectorAll('.sidebar-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        }
+    
+        updateOrderCounts();
+        restoreFilter(); // استعادة الفلتر عند تحميل الصفحة
+    
+        // Event listeners for filter buttons
+        const newOrdersButton = document.getElementById('new-orders-button');
+        const allOrdersButton = document.getElementById('all-orders-button');
+    
+        if (newOrdersButton && allOrdersButton) {
+            newOrdersButton.addEventListener('click', function() {
+                localStorage.setItem('selectedNewOrderStatus', 'new'); // حفظ حالة الفلتر للطلبات الجديدة
+                filterOrders();
+                setActiveButton(newOrdersButton);
+            });
+    
+            allOrdersButton.addEventListener('click', function() {
+                localStorage.setItem('selectedNewOrderStatus', 'all'); // حفظ حالة الفلتر للطلبات الجديدة
+                filterOrders();
+                setActiveButton(allOrdersButton);
+            });
+        } else {
+            console.error('One or both filter buttons not found');
+        }
+    
+    
+    
+    
+    
+    
+
+    
+        document.querySelectorAll('.track-option').forEach(button => {
+            button.addEventListener('click', function() {
+                const status = this.getAttribute('data-status');
+                const ordercode = this.closest('.card').getAttribute('data-ordercode');
+                if (status === 'InDelivery') {
+                    toggleDriverNameInput(ordercode);
+                } else {
+                    updateOrderTracking(ordercode, status, '');
+                }
+            });
+        });
+    
+        document.querySelectorAll('.new-track-order-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const ordercode = this.getAttribute('data-ordercode');
+                submitDriverName(ordercode);
+            });
+        });
+    
+        document.querySelectorAll('.truk-submit-driver-name').forEach(button => {
+            button.addEventListener('click', function() {
+                const ordercode = this.getAttribute('data-ordercode');
+                const driverName = document.getElementById('truk-driver-name-text-' + ordercode).value;
+                if (!driverName) {
+                    alert('اسم السائق مطلوب!');
+                    return;
+                }
+                updateOrderTracking(ordercode, 'InDelivery', driverName);
+            });
+        });
+    
+        document.querySelectorAll('.card').forEach(card => {
+            const ordercode = card.getAttribute('data-ordercode');
+            updateTrackingIcon(ordercode);
+        });
+    
+
+    
+    
+        var trackingInfo = document.querySelectorAll('.card-info');
+    
+        trackingInfo.forEach(function(info) {
+            var trackingText = info.querySelector('span').innerText;
+            var icon = info.querySelector('.tracking-icon');
+    
+            if (trackingText === 'قيد التجهيز') {
+                icon.classList.add('fa-concierge-bell', 'icon-preparing');
+            } else if (trackingText === 'تم التجهيز') {
+                icon.classList.add('fa-box', 'icon-ready');
+            } else if (trackingText === 'جار التسليم') {
+                icon.classList.add('fa-shipping-fast', 'icon-delivering');
+            } else if (trackingText === 'تم التوصيل') {
+                icon.classList.add('fa-check-circle', 'icon-delivered');
+            }
+        });
+    });
+    
+    function handleStatusChange(ordercode, button) {
+        const status = button.getAttribute('data-status');
+        const reason = button.getAttribute('data-reason');
+    
+        if (reason === 'إلغاء قبل خروج السائق') {
+            hideDriverNameBox(ordercode);
+            handleCancelBeforeDelivery(ordercode);
+        } else if (reason === 'حادث وجار تحويل الطلب') {
+            handleAccidentAndRedirect(ordercode);
+        } else {
+            hideDriverNameBox(ordercode);
+            handleGeneralCancellation(ordercode, status, reason);
+        }
+    }
+    
+    function hideDriverNameBox(ordercode) {
+        var driverNameBox = document.getElementById('truk-accident-driver-name-' + ordercode);
+        if (driverNameBox) {
+            driverNameBox.style.display = "none";
+        } else {
+            console.error('Element not found: truk-accident-driver-name-' + ordercode);
+        }
+    }
+    
+    function handleCancelBeforeDelivery(ordercode) {
+        const csrfToken = document.getElementById('csrf_token').value;
+        fetch('/check_order_tracking', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json',
+                        'X-CSRFToken': csrfToken
+            },
+            body: JSON.stringify({ ordercode: ordercode }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.driver_name) {
+                alert('انتبه كون تم تعيين الطلب للسائق : ' + data.driver_name);
+            }
+            handleGeneralCancellation(ordercode, 'Lost', 'إلغاء قبل خروج السائق');
+        })
+        .catch(error => console.error('Error:', error));
+    }
+    
+    function handleGeneralCancellation(ordercode, status, reason) {
+        toggleCommentBox(ordercode);
+        setupSubmitLostComment(ordercode, status, reason);
+    }
+    
+    function handleAccidentAndRedirect(ordercode) {
+        toggleDriverNameBox(ordercode);
+        const submitButton = document.getElementById('truk-submit-accident-driver-name-' + ordercode);
+        if (submitButton) {
+            submitButton.addEventListener('click', function() {
+                const newDriverName = document.getElementById('truk-new-driver-name-text-' + ordercode).value;
+                if (newDriverName.trim() === '') {
+                    alert('يرجى إدخال اسم السائق الجديد');
+                    return;
+                }
+                updateAccidentDriverName(ordercode, newDriverName, 'حادث وجار تحويل الطلب');
+            });
+        } else {
+            console.error('Element not found: truk-submit-accident-driver-name-' + ordercode);
+        }
+    }
+    
+    function setupSubmitLostComment(ordercode, status, reason) {
+        const submitButton = document.getElementById('truk-submit-lost-comment-' + ordercode);
+        if (submitButton) {
+            submitButton.addEventListener('click', function() {
+                const comment = document.getElementById('truk-lost-comment-text-' + ordercode).value || 'لا يوجد';
+                updateOrderStatus(ordercode, status, comment, reason);
+            });
+        } else {
+            console.error('Element not found: truk-submit-lost-comment-' + ordercode);
+        }
+    }
+    
+    function updateOrderStatus(ordercode, status, comment, reason) {
+        console.log("Sending data:", { ordercode: ordercode, status: status, comment: comment, wlost: reason });
+        const csrfToken = document.getElementById('csrf_token').value;
+    
+        fetch('/update_order_status', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+            },
+            body: JSON.stringify({ ordercode: ordercode, status: status, comment: comment, wlost: reason }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.reload();
+            } else {
+
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            
+        });
+    }
+    
+    function updateAccidentDriverName(ordercode, newDriverName, reason) {
+        console.log("Sending data:", { ordercode: ordercode, new_driver_name: newDriverName, wlost: reason });
+        const csrfToken = document.getElementById('csrf_token').value;
+        fetch('/update_driver_and_time', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+            },
+            body: JSON.stringify({ ordercode: ordercode, new_driver_name: newDriverName }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.reload();
+            } else {
+                alert('حدث خطأ أثناء تحديث السائق: ' + data.error);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('حدث خطأ أثناء تحديث السائق');
+        });
+    }
+    
+    function updateTrackingIcon(ordercode) {
+        const card = document.querySelector(`.card[data-status][data-ordercode="${ordercode}"]`);
+        if (card) {
+            const trackingIcon = card.querySelector('.track-update-button i');
+            const orderStatus = card.querySelector('.card-info i.fa-info-circle').nextElementSibling.textContent.trim();
+    
+            trackingIcon.className = '';
+            trackingIcon.classList.add('fas');
+    
+            switch(orderStatus) {
+                case 'قيد التجهيز':
+                    trackingIcon.classList.add('fa-concierge-bell', 'icon-preparing');
+                    break;
+                case 'تم التجهيز':
+                    trackingIcon.classList.add('fa-box', 'icon-ready');
+                    break;
+                case 'جار التسليم':
+                    trackingIcon.classList.add('fa-shipping-fast', 'icon-delivering');
+                    break;
+                case 'تم التوصيل':
+                    trackingIcon.classList.add('fa-check-circle', 'icon-completed');
+                    break;
+                default:
+                    trackingIcon.classList.add('fa-info-circle');
+            }
+        }
+    }
+    
+    function submitLostComment(orderCode) {
+        var comment = document.getElementById('truk-lost-comment-text-' + orderCode).value || 'لا يوجد';
+        if (comment.trim() === '') {
+            alert('يرجى إدخال تعليق');
+            return;
+        }
+        updateOrderStatus(orderCode, 'Lost', comment, 'إلغاء من الزبون');
+    }
+    
+    function submitAccidentDriverName(orderCode) {
+        var newDriverName = document.getElementById('truk-new-driver-name-text-' + orderCode).value;
+        if (newDriverName.trim() === '') {
+            alert('يرجى إدخال اسم السائق الجديد');
+            return;
+        }
+        updateAccidentDriverName(orderCode, newDriverName, 'حادث وجار تحويل الطلب');
+    }
+    
+    function printOrder(ordercode) {
+        const csrfToken = document.getElementById('csrf_token').value;
+        if (ordercode) {
+            fetch('/print_order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken
+                },
+                body: JSON.stringify({ ordercode: ordercode }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('تم إرسال أمر الطباعة بنجاح');
+                } else {
+                    alert('حدث خطأ أثناء إرسال أمر الطباعة');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    }
+    
+    function toggleSubButtons(type, orderCode) {
+        var statusSubButtons = document.getElementById('status-sub-buttons-' + orderCode);
+        var trackSubButtons = document.getElementById('track-sub-buttons-' + orderCode);
+    
+        if (type === 'status') {
+            if (statusSubButtons) {
+                if (statusSubButtons.style.display === "none" || statusSubButtons.style.display === "") {
+                    statusSubButtons.style.display = 'flex';
+                    if (trackSubButtons) trackSubButtons.style.display = 'none';
+                } else {
+                    statusSubButtons.style.display = 'none';
+                    if (trackSubButtons) trackSubButtons.style.display = 'flex';
+                }
+            } else {
+                console.error('Element not found: status-sub-buttons-' + orderCode);
+            }
+        } else if (type === 'track') {
+            if (trackSubButtons) {
+                if (trackSubButtons.style.display === "none" || trackSubButtons.style.display === "") {
+                    trackSubButtons.style.display = 'flex';
+                    if (statusSubButtons) statusSubButtons.style.display = 'none';
+                } else {
+                    trackSubButtons.style.display = 'none';
+                    if (statusSubButtons) statusSubButtons.style.display = 'flex';
+                }
+            } else {
+                console.error('Element not found: track-sub-buttons-' + orderCode);
+            }
+        }
+    }
+    
+    function toggleCommentBox(orderCode) {
+        var commentBox = document.getElementById('truk-lost-comment-' + orderCode);
+        if (commentBox) {
+            commentBox.style.display = "block";
+        } else {
+            console.error('Element not found: truk-lost-comment-' + orderCode);
+        }
+    }
+    
+    function toggleDriverNameBox(orderCode) {
+        var driverNameBox = document.getElementById('truk-accident-driver-name-' + orderCode);
+        if (driverNameBox) {
+            var commentBox = document.getElementById('truk-lost-comment-' + orderCode);
+            driverNameBox.style.display = "block";
+            commentBox.style.display = "none";
+        } else {
+            console.error('Element not found: truk-accident-driver-name-' + orderCode);
+        }
+    }
+    
+    function toggleDriverNameInput(orderCode) {
+        var driverNameInput = document.getElementById('truk-driver-name-' + orderCode);
+        if (driverNameInput) {
+            if (driverNameInput.style.display === "none" || driverNameInput.style.display === "") {
+                driverNameInput.style.display = "block";
+            } else {
+                driverNameInput.style.display = "none";
+            }
+        } else {
+            console.error('Element not found: truk-driver-name-' + orderCode);
+        }
+    }
+    
+    function submitDriverName(orderCode) {
+        var driverNameInput = document.getElementById('truk-driver-name-text-' + orderCode);
+        if (!driverNameInput) {
+            console.error('Element not found: truk-driver-name-text-' + orderCode);
+            return;
+        }
+    
+        var driverName = driverNameInput.value;
+        if (driverName.trim() === '') {
+            alert('يرجى إدخال اسم السائق');
+            return;
+        }
+    
+        updateOrderTracking(orderCode, 'InDelivery', driverName);
+    }
+    
+    function updateOrderTracking(orderCode, status, detail) {
+        if (orderCode) {
+            const csrfToken = document.getElementById('csrf_token').value;
+    
+            fetch('/update_order_tracking', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken // تضمين رمز CSRF في الترويسة
+                },
+                body: JSON.stringify({ ordercode: orderCode, status: status, detail: detail }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.reload();
+                } else {
+                    alert('حدث خطأ أثناء تحديث حالة التتبع');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    }
+    
+    
+    
+    
+    
+
+
+    function searchOrders() {
+        var input = searchInputOrder.value.toUpperCase();
+        var cards = document.querySelectorAll('.card');
+        cards.forEach(function(card) {
+            var orderCode = card.querySelector('.customer-name') ? card.querySelector('.customer-name').textContent.toUpperCase() : "";
+            var phoneNumber = card.querySelector('.phone-icon + span') ? card.querySelector('.phone-icon + span').textContent.toUpperCase() : "";
+            var address = card.querySelector('.address-icon + span') ? card.querySelector('.address-icon + span').textContent.toUpperCase() : "";
+            
+            if (orderCode.indexOf(input) > -1 || phoneNumber.indexOf(input) > -1 || address.indexOf(input) > -1) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+    
+    var searchInputOrder = document.querySelector('.search-input-order');
+    searchInputOrder.addEventListener('keyup', searchOrders);
+    
+
+    /////// فلترة طلبات
+    
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const editButtons = document.querySelectorAll('.edit-button');
+    
+        editButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const orderCode = this.getAttribute('data-ordercode');
+                const csrfToken = document.getElementById('csrf_token').value;
+    
+                fetch('/get_order_by_code', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': csrfToken
+                    },
+                    body: JSON.stringify({ order_code: orderCode }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                    } else {
+                        populateEditForm(data);
+                        document.querySelector('#edit-order-form').classList.remove('hidden');
+                        document.getElementById('menu-container-han').style.display = 'block';
+                        document.getElementById('form-overlay').classList.remove('hidden');
+                        document.body.classList.add('no-scroll');
+                        document.getElementById('edit-order-code').value = orderCode;
+    
+                        const orderDetails = data.order || '';
+                        sessionStorage.setItem('originalOrderDetails', orderDetails);
+    
+                        const orderItems = orderDetails.split('|');
+                        const orderList = document.getElementById('order-list');
+                        const restaurantMenu = document.querySelectorAll('.menu-item');
+    
+                        orderList.innerHTML = '';
+                        let total = 0;
+    
+                        orderItems.forEach(item => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = item;
+                            orderList.appendChild(listItem);
+    
+                            const itemName = item.split(' x ')[1].split(' (')[0];
+                            const itemQuantity = parseInt(item.split(' x ')[0]);
+    
+                            restaurantMenu.forEach(menuItem => {
+                                const menuItemName = menuItem.querySelector('.item-details h2').innerText;
+                                if (menuItemName === itemName) {
+                                    const quantitySpan = menuItem.querySelector('.quantity span');
+                                    quantitySpan.innerText = itemQuantity;
+                                    menuItem.querySelector('.quantity').classList.remove('hidden');
+                                    menuItem.querySelector('.add-button').classList.add('hidden');
+                                    
+                                    const quantityButtons = menuItem.querySelectorAll('.quantity-button');
+                                    quantityButtons.forEach(button => {
+                                        button.addEventListener('click', handleQuantityButtonClick);
+                                    });
+                                }
+                            });
+    
+                            const itemPrice = parseFloat(item.match(/\((\d+(\.\d+)?) دينار\)/)[1]);
+                            total += itemPrice;
+                        });
+    
+                        document.querySelector('#total-price span').textContent = total.toFixed(2);
+                        document.getElementById('total-price-input').value = total.toFixed(2);
+                        document.getElementById('confirm-order-button').classList.add('hidden');
+                        document.getElementById('confirm-order-edit-button').classList.remove('hidden');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+    
+        function populateEditForm(data) {
+            document.querySelector('#edit-order-details').value = data.order ? data.order.split('|').join('\n') : '';
+            document.querySelector('#edit-zone').value = data.zone || '';
+        
+            // تحويل نسبة الخصم من الشكل العشري إلى الشكل النصي
+            const discountValue = `${parseFloat(data.discount).toFixed(0)}%`; // تحويل الخصم إلى نسبة
+            const discountSelect = document.querySelector('#edit-discount');
+            
+            // التحقق من وجود الخيار في القائمة المنسدلة وتعيينه
+            let discountOption = Array.from(discountSelect.options).find(option => option.value === discountValue);
+            if (discountOption) {
+                discountSelect.value = discountValue;
+            } else {
+                discountSelect.value = '0%'; // تعيين القيمة الافتراضية إذا لم يكن هناك تطابق
+            }
+        
+            document.querySelector('#edit-phone').value = data.phone || '';
+            document.querySelector('#edit-address').value = data.address || '';
+            document.querySelector('#edit-name').value = data.name || '';
+            document.querySelector('#edit-notes').value = data.note || '';
+            document.querySelector('#edit-total-price-input').value = data.total_cost || '';
+        }
+        
+    
+        document.getElementById('close-edit-form-button').addEventListener('click', function() {
+            document.getElementById('edit-order-form').classList.add('hidden');
+            document.getElementById('form-overlay').classList.add('hidden');
+            document.body.classList.remove('no-scroll');
+    
+            const orderListItems = document.querySelectorAll('#order-list li');
+            const orderDetailsArray = [];
+            orderListItems.forEach(item => {
+                orderDetailsArray.push(item.innerText);
+            });
+            document.querySelector('#edit-order-details').value = orderDetailsArray.join('\n');
+        });
+    
+        document.getElementById('submit-edit-order').addEventListener('click', function(event) {
+            const csrfToken = document.getElementById('csrf_token').value;
+            event.preventDefault();
+            let orderDetails = document.getElementById('edit-order-details').value.split('\n').join('|');
+            const originalOrderDetails = sessionStorage.getItem('originalOrderDetails');
+            
+            if (orderDetails.trim() === '') {
+                orderDetails = originalOrderDetails;
+            }
+    
+            const orderData = {
+                order_code: document.getElementById('edit-order-code').value,
+                order_details: orderDetails,
+                zone: document.getElementById('edit-zone').value,
+                discount: document.getElementById('edit-discount').value,
+                phone: document.getElementById('edit-phone').value,
+                address: document.getElementById('edit-address').value,
+                name: document.getElementById('edit-name').value,
+                notes: document.getElementById('edit-notes').value,
+                total_price: document.getElementById('edit-total-price-input').value
+            };
+    
+            fetch('/submit_edit_order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken
+                },
+                body: JSON.stringify(orderData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    let message = 'تم تحديث الطلب بنجاح!';
+                    if (!data.print_status) {
+                        message += '، ولكن فشلت الطباعة. تأكد من تشغيل الطابعة.';
+                    }
+                    alert(message);
+                    document.getElementById('edit-order-form').classList.add('hidden');
+                    document.getElementById('form-overlay').classList.add('hidden');
+                    document.body.classList.remove('no-scroll');
+                    window.location.reload();
+                } else {
+                    alert('حدث خطأ أثناء تحديث الطلب: ' + data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });            
+    
+        function handleQuantityButtonClick(event) {
+            const button = event.target;
+            const quantitySpan = button.parentNode.querySelector('span');
+            let quantity = parseInt(quantitySpan.innerHTML);
+    
+            if (button.innerHTML === '+') {
+                quantity++;
+            } else if (button.innerHTML === '-') {
+                if (quantity > 0) {
+                    quantity--;
+                }
+            }
+            quantitySpan.innerHTML = quantity;
+    
+            // إخفاء زر '-' إذا كانت الكمية صفر
+            const minusButton = button.parentNode.querySelector('.quantity-button:nth-child(1)');
+            if (quantity === 0) {
+                minusButton.style.display = 'none';
+            } else {
+                minusButton.style.display = 'inline';
+            }
+    
+            updateOrderSummary();
+        }
+    
+        function updateOrderSummary() {
+            const orderList = document.getElementById('order-list');
+            const totalPriceSpan = document.querySelector('#total-price span');
+            const totalPriceInput = document.getElementById('total-price-input');
+    
+            orderList.innerHTML = '';
+            let baseTotal = 0;
+            const orderDetailsArray = [];
+            const menuItems = document.querySelectorAll('.menu-item');
+    
+            menuItems.forEach(menuItem => {
+                const quantitySpan = menuItem.querySelector('.quantity span');
+                const quantity = parseInt(quantitySpan.innerHTML);
+    
+                if (quantity > 0) {
+                    const itemName = menuItem.querySelector('h2').innerText;
+                    const price = parseFloat(menuItem.querySelector('p:nth-child(3)').innerText.split(': ')[1]);
+                    const itemTotalPrice = quantity * price;
+    
+                    const listItem = document.createElement('li');
+                    listItem.innerText = `${quantity} x ${itemName} (${itemTotalPrice.toFixed(2)} دينار)`;
+                    orderList.appendChild(listItem);
+    
+                    baseTotal += itemTotalPrice;
+                    orderDetailsArray.push(`${quantity} x ${itemName} (${itemTotalPrice.toFixed(2)} دينار)`);
+                }
+            });
+    
+            totalPriceSpan.innerText = baseTotal.toFixed(2);
+            totalPriceInput.value = baseTotal.toFixed(2);
+            document.getElementById('order-details').value = orderDetailsArray.join('|');
+        }
+    
+        function updateFinalPrice() {
+            let finalPrice = parseFloat(document.getElementById('total-price-input').value);
+        
+            const zone = document.getElementById('edit-zone').value;
+            if (zone === 'داخل الزون') {
+                finalPrice += 0;
+            } else if (zone === 'خارج الزون') {
+                finalPrice += 3000;
+            }
+        
+            let discount = document.getElementById('edit-discount').value;
+            if (discount.endsWith('%')) {
+                discount = discount.slice(0, -1);
+            }
+            discount = parseFloat(discount);
+            if (!isNaN(discount)) {
+                const discountAmount = (finalPrice * discount) / 100;
+                finalPrice -= discountAmount;
+            }
+        
+            document.getElementById('edit-total-price-input').value = finalPrice.toFixed(2);
+        }
+        
+    
+        document.getElementById('edit-zone').addEventListener('change', updateFinalPrice);
+        document.getElementById('edit-discount').addEventListener('change', updateFinalPrice);
+    
+        document.getElementById('confirm-order-edit-button').addEventListener('click', function() {
+            const orderListItems = document.querySelectorAll('#order-list li');
+            const orderDetailsArray = [];
+            orderListItems.forEach(item => {
+                orderDetailsArray.push(item.innerText);
+            });
+            document.querySelector('#edit-order-details').value = orderDetailsArray.join('\n');
+        
+            const originalOrderDetails = sessionStorage.getItem('originalOrderDetails');
+            const currentOrderDetails = document.getElementById('edit-order-details').value;
+        
+            if (currentOrderDetails.trim() === '') {
+                document.getElementById('edit-order-details').value = originalOrderDetails;
+            }
+        
+            document.getElementById('edit-order-form').classList.remove('hidden');
+            document.getElementById('form-overlay').classList.remove('hidden');
+            document.body.classList.add('no-scroll');
+            updateFinalPrice();
+        });
+    });
+    
+    
+        
+    
+    
+
+    function goMenuord(phone) {
+        document.getElementById("menu-container-han").style.display = "block";
+        document.getElementById("chckph-phone").value = "";
+        document.getElementById("phone").value = phone; // تأكد من إضافة هذا السطر
+    }
+
+    document.getElementById("chckph-makeOrderPhone").onclick = function() {
+        document.getElementById("chckph-myModal").style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+
+    document.getElementById("chckph-makeOrderPhone-nav").addEventListener("click", function() {
+        document.getElementById("chckph-myModal").style.display = "block";
+        document.body.classList.add("no-scroll");
+    });
+
+    document.getElementsByClassName("chckph-close")[0].onclick = function() {
+        document.getElementById("chckph-myModal").style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+
+    document.getElementById("chckph-phoneForm").onsubmit = function(event) {
+        event.preventDefault();
+        var phone = document.getElementById("chckph-phone").value;
+        const csrfToken = document.getElementById('csrf_token').value;
+    
+        fetch('/checkPhone', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken
+            },
+            body: JSON.stringify({ phone: phone }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            var resultDiv = document.getElementById("chckph-result");
+            if (data.length > 0) {
+                var order = data[0];
+                var zoneValue = order.oroutinzone === 'داخل الزون' ? 'داخل الزون' : 'خارج الزون';
+                var totalCost = order.ordtocost;
+                resultDiv.innerHTML = `
+                    <form id="chckph-orderForm" class="chckph-form">
+                        <input type="hidden" name="csrf_token" value="${csrfToken}">
+                        <div class="chckph-form-group">
+                            <label for="chckph-order">الطلب:</label>
+                            <input type="text" id="chckph-order" name="order" value="${order.order}" required>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-phone-result">رقم الهاتف:</label>
+                            <input type="text" id="chckph-phone-result" name="phone" value="${order.Cphone}" required>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-name">الاسم:</label>
+                            <input type="text" id="chckph-name" name="name" value="${order.Cname}" required>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-location">العنوان:</label>
+                            <input type="text" id="chckph-location" name="address" value="${order.location}" required>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-note">الملاحظة:</label>
+                            <input type="text" id="chckph-note" name="note" value="${order.note}">
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-zone">اختر المنطقة:</label>
+                            <select id="chckph-zone" name="zone" class="form-order-select" required>
+                                <option value="داخل الزون" ${zoneValue === 'داخل الزون' ? 'selected' : ''}>داخل الزون</option>
+                                <option value="خارج الزون" ${zoneValue === 'خارج الزون' ? 'selected' : ''}>خارج الزون</option>
+                            </select>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-discount">اختر نسبة الخصم:</label>
+                            <select id="chckph-discount" name="discount" class="form-order-select">
+                                <option value="0%">لا يوجد خصم</option>
+                                <option value="10%">10%</option>
+                                <option value="20%">20%</option>
+                                <option value="30%">30%</option>
+                                <option value="50%">50%</option>
+                            </select>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-ordtocost">السعر الإجمالي:</label>
+                            <input type="text" id="chckph-ordtocost" name="tocost" value="${totalCost}" readonly>
+                        </div>
+                        <button type="button" class="chckph-button" onclick="submitOrderForm()">إضافة الطلب</button>
+                        <button type="button" class="chckph-button" onclick="makeorder()">طلب جديد</button>
+                    </form>
+                `;
+    
+                function updateTotalCost() {
+                    var zoneValue = document.getElementById("chckph-zone").value;
+                    var discountValue = parseFloat(document.getElementById("chckph-discount").value);
+                    var newCost = parseFloat(totalCost);
+    
+                    if (zoneValue === "خارج الزون") {
+                        newCost += 3000;
+                    }
+    
+                    if (isNaN(discountValue)) discountValue = 0;
+                    var discountAmount = (newCost * discountValue) / 100;
+                    newCost -= discountAmount;
+    
+                    if (isNaN(newCost)) newCost = 0;
+                    document.getElementById("chckph-ordtocost").value = newCost.toFixed(2);
+                }
+    
+                document.getElementById("chckph-zone").addEventListener("change", updateTotalCost);
+                document.getElementById("chckph-discount").addEventListener("change", updateTotalCost);
+    
+                document.getElementById("chckph-zone").dispatchEvent(new Event("change"));
+                document.getElementById("chckph-discount").dispatchEvent(new Event("change"));
+            } else {
+                resultDiv.innerHTML = `
+                    No results found.
+                    <button type="button" class="chckph-button" onclick="goMenuord('${phone}')">طلب جديد</button>
+                `;
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    };
+    
+        
+        
+        function openOrderForm(phone, name, order, address, note) {
+            document.getElementById("phone").value = phone;
+            document.getElementById("name").value = name;
+            document.getElementById("order-details").value = order;
+            document.getElementById("address").value = address;
+            document.getElementById("notes").value = note;
+            document.getElementById("form-overlay").classList.remove("hidden");
+            document.getElementById("order-form").classList.remove("hidden");
+            document.body.classList.add("no-scroll");
+        }
+        
+        function generateUUID2() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0,
+                    v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        
+        function submitOrderForm() {
+            var form = document.getElementById('chckph-orderForm');
+            var formData = new FormData(form);
+            var submitButton = form.querySelector('button[onclick="submitOrderForm()"]');
+            const csrfToken = document.getElementById('csrf_token').value;
+        
+            if (!submitButton) {
+                console.error('Submit button not found');
+                return;
+            }
+        
+            var loadingMessage = document.createElement('div');
+            loadingMessage.className = 'loading-message';
+            loadingMessage.innerHTML = '<div class="spinner"></div><span>الطلب قيد المعالجة، يرجى الانتظار...</span>';
+        
+            document.body.appendChild(loadingMessage);
+            submitButton.disabled = true;
+            submitButton.style.backgroundColor = '#f39c12';
+        
+            // إضافة UUID إلى formData
+            var orderId = generateUUID2();
+            formData.append('order_id', orderId);
+            formData.append('csrf_token', csrfToken); // تضمين رمز CSRF في البيانات
+        
+            fetch('/make-order', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(text => {
+                console.log('Response Text:', text);  // تسجيل النص الكامل للاستجابة
+                let data;
+                try {
+                    data = JSON.parse(text);
+                } catch (error) {
+                    throw new Error('Failed to parse JSON: ' + error.message);
+                }
+        
+                let message = data.message || 'تم استلام الطلب بنجاح';
+                if (data.print_status === false) {
+                    message += '، ولكن فشلت الطباعة. تأكد من تشغيل الطابعة.';
+                }
+                alert(message);
+                form.reset();
+                submitButton.disabled = false;
+                submitButton.style.backgroundColor = '';
+                loadingMessage.remove();
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                submitButton.disabled = false;
+                submitButton.style.backgroundColor = '';
+                loadingMessage.remove();
+                alert('حدث خطأ أثناء إرسال الطلب: ' + error.message);
+            });
+        }
+        
+        
+        
+        
+        
+    
+        function createNewOrder() {
+            document.getElementById("chckph-result").innerHTML = `
+                <form id="chckph-newOrderForm" class="chckph-form">
+                    <div class="chckph-form-group">
+                        <label for="chckph-newOrder">الطلب:</label>
+                        <input type="text" id="chckph-newOrder" name="order" required>
+                    </div>
+                    <div class="chckph-form-group">
+                        <label for="chckph-newPhone">رقم الهاتف:</label>
+                        <input type="text" id="chckph-newPhone" name="phone" required>
+                    </div>
+                    <div class="chckph-form-group">
+                        <label for="chckph-newName">الاسم:</label>
+                        <input type="text" id="chckph-newName" name="name" required>
+                    </div>
+                    <div class="chckph-form-group">
+                        <label for="chckph-newLocation">العنوان:</label>
+                        <input type="text" id="chckph-newLocation" name="address" required>
+                    </div>
+                    <div class="chckph-form-group">
+                        <label for="chckph-newNote">الملاحظة:</label>
+                        <input type="text" id="chckph-newNote" name="note">
+                    </div>
+                    <button type="button" class="chckph-button" onclick="submitNewOrderForm()">إضافة الطلب</button>
+                </form>
+            `;
+        }
+    
+        function submitNewOrderForm() {
+            var form = document.getElementById('chckph-newOrderForm');
+            var formData = new FormData(form);
+        
+            // تهيئة الطلبات مرة أخرى بالشكل المطلوب قبل الإرسال
+            var orderDetails = formData.get('order-details');
+            var formattedOrder = orderDetails.split('\n').join('|');
+            formData.set('order-details', formattedOrder);
+        
+            fetch('/make-order', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                let message = data.message || 'تم استلام الطلب بنجاح';
+                if (data.print_status === false) {
+                    message += '، ولكن فشلت الطباعة. تأكد من تشغيل الطابعة.';
+                }
+                alert(message);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء إرسال الطلب');
+            });        
+        }
+        
+    
+        function makeorder() {
+            var phone = document.getElementById("chckph-phone-result").value;
+            var name = document.getElementById("chckph-name").value;
+            var address = document.getElementById("chckph-location").value;
+            var order = document.getElementById("chckph-order").value;
+            var notes = document.getElementById("chckph-note").value;
+        
+            // تقسيم الطلبات بناءً على الفواصل الرأسية "|"
+            var orderItems = order.split('|');
+            var formattedOrder = orderItems.join('\n');
+        
+            // Set values in the second form
+            document.getElementById("phone").value = phone;
+            document.getElementById("name").value = name;
+            document.getElementById("address").value = address;
+            document.getElementById("order-details").value = formattedOrder;
+            document.getElementById("notes").value = notes;
+        
+            // Show the second form
+            document.getElementById("menu-container-han").style.display = "block";
+        }
+    
+
+    function redirectToCustomer() {
+        fetch('/customerwin')
+            .then(function(response) {
+                if (response.ok) {
+                    window.location.href = "/customerwin";
+                } else {
+                    console.log('حدث خطأ في الطلب.');
+                }
+            })
+            .catch(function(error) {
+                console.log('حدث خطأ في الاتصال.', error);
+            });
+    }
+
+    function redirectToHome() {
+        fetch('/homewin')
+            .then(function(response) {
+                if (response.ok) {
+                    window.location.href = "/homewin";
+                } else {
+                    console.log('حدث خطأ في الطلب.');
+                }
+            })
+            .catch(function(error) {
+                console.log('حدث خطأ في الاتصال.', error);
+            });
+    }
+
+    function redirectAdmin() {
+        fetch('/adminwin')
+            .then(function(response) {
+                if (response.ok) {
+                    window.location.href = "/adminwin";
+                } else {
+                    console.log('حدث خطأ في الطلب.');
+                }
+            })
+            .catch(function(error) {
+                console.log('حدث خطأ في الاتصال.', error);
+            });
+    }
+
+    
+
+    function toggleAddButton(button) {
+        button.classList.add("hidden");
+        var quantityDiv = button.nextElementSibling;
+        var quantitySpan = quantityDiv.querySelector("span");
+        quantitySpan.innerHTML = "1";
+        quantityDiv.classList.remove("hidden");
+        var quantityButtons = quantityDiv.getElementsByTagName("button");
+        for (var i = 0; i < quantityButtons.length; i++) {
+            quantityButtons[i].addEventListener("click", handleQuantityButtonClick);
+        }
+        updateOrderSummary();
+    }
+
+    function handleQuantityButtonClick(event) {
+        var button = event.target;
+        var quantitySpan = button.parentNode.querySelector("span");
+        var quantity = parseInt(quantitySpan.innerHTML);
+
+        if (button.classList.contains("quantity-button")) {
+            if (button.innerHTML === "+") {
+                quantity++;
+            } else if (button.innerHTML === "-") {
+                if (quantity > 0) {
+                    quantity--;
+                }
+            }
+            quantitySpan.innerHTML = quantity;
+        }
+
+        if (quantity === 0 && !button.classList.contains("add-button")) {
+            var quantityDiv = button.parentNode;
+            quantityDiv.classList.add("hidden");
+            var addButton = quantityDiv.parentNode.querySelector(".add-button");
+            addButton.classList.remove("hidden");
+        }
+
+        updateOrderSummary();
+    }
+
+    var baseTotal = 0; // متغير لحفظ السعر الأساسي الإجمالي
+
+    function updateOrderSummary() {
+        var orderList = document.getElementById("order-list");
+        var totalPriceSpan = document.querySelector("#total-price span");
+        var totalPriceInput = document.getElementById("total-price-input");
+
+        orderList.innerHTML = "";
+        var menuItems = document.querySelectorAll(".menu-item");
+        baseTotal = 0; // إعادة تعيين السعر الأساسي الإجمالي
+        var orderDetailsArray = [];
+
+        menuItems.forEach(function(menuItem) {
+            var quantitySpan = menuItem.querySelector(".quantity span");
+            var quantity = parseInt(quantitySpan.innerHTML);
+
+            if (quantity > 0) {
+                var itemName = menuItem.querySelector("h2").innerHTML;
+                var price = parseFloat(menuItem.querySelector("p:nth-child(3)").innerHTML.split(': ')[1]);
+                if (isNaN(price)) price = 0;
+                var itemTotalPrice = quantity * price;
+
+                var listItem = document.createElement("li");
+                listItem.innerHTML = quantity + " x " + itemName + " (" + itemTotalPrice.toFixed(2) + " دينار)";
+                orderList.appendChild(listItem);
+
+                baseTotal += itemTotalPrice; // تحديث السعر الأساسي الإجمالي
+                orderDetailsArray.push(quantity + " x " + itemName + " (" + itemTotalPrice.toFixed(2) + " دينار)");
+            }
+        });
+
+        totalPriceSpan.innerHTML = baseTotal.toFixed(2);
+        totalPriceInput.value = baseTotal.toFixed(2); // تحديث المدخل للسعر الأساسي الإجمالي
+        document.getElementById("order-details").value = orderDetailsArray.join("\n");
+    }
+
+    function updateFinalPrice() {
+        var finalPrice = baseTotal; // استخدام السعر الأساسي الإجمالي للحسابات
+
+        // حساب تكلفة المنطقة
+        var zone = document.getElementById("zone").value;
+        if (zone === "داخل الزون") {
+            finalPrice += 0;
+        } else if (zone === "خارج الزون") {
+            finalPrice += 3000;
+        }
+
+        // حساب الخصم
+        var discount = parseFloat(document.getElementById("discount").value);
+        if (isNaN(discount)) discount = 0;
+        var discountAmount = (finalPrice * discount) / 100;
+        finalPrice -= discountAmount;
+
+        if (isNaN(finalPrice)) finalPrice = 0;
+
+        document.getElementById("total-price-input").value = finalPrice.toFixed(2);
+    }
+
+    document.getElementById("zone").addEventListener("change", updateFinalPrice);
+    document.getElementById("discount").addEventListener("change", updateFinalPrice);
+
+    document.getElementById("confirm-order-button").addEventListener("click", function() {
+        var orderDetails = [];
+        var orderListItems = document.querySelectorAll("#order-list li");
+        orderListItems.forEach(function(item) {
+            orderDetails.push(item.innerHTML);
+        });
+        document.getElementById("order-details").value = orderDetails.join("\n");
+
+        document.getElementById("form-overlay").classList.remove("hidden");
+        document.getElementById("order-form").classList.remove("hidden");
+        document.body.classList.add("no-scroll");
+        document.querySelectorAll("button, input, textarea").forEach(function(element) {
+            element.disabled = true;
+        });
+        document.getElementById("close-form-button").disabled = false;
+        document.querySelectorAll("#order-form input, #order-form textarea").forEach(function(element) {
+            element.disabled = false;
+        });
+        document.querySelector("#order-form button[type='submit']").disabled = false;
+
+        updateFinalPrice(); // تحديث السعر النهائي عند فتح النموذج
+    });
+
+    document.getElementById("close-form-button").addEventListener("click", function() {
+        document.getElementById("form-overlay").classList.add("hidden");
+        document.getElementById("order-form").classList.add("hidden");
+        document.body.classList.remove("no-scroll");
+        document.querySelectorAll("button, input, textarea").forEach(function(element) {
+            element.disabled = false;
+        });
+    });
+
+    $(document).ready(function() {
+        $('#phone').on('input', function() {
+            var phone = $(this).val();
+            if (phone.length > 0) {
+                $.ajax({
+                    url: '/get_customer_data',
+                    type: 'GET',
+                    data: { phone: phone },
+                    success: function(response) {
+                        $('#name').val(response.Cname);
+                        $('#address').val(response.Caddress);
+                        $('#address-description').val(response.CaddressDescription);
+                        $('#notes').val(response.Cnote);
+                    },
+                    error: function() {
+                        $('#name').val('');
+                        $('#address').val('');
+                        $('#address-description').val('');
+                        $('#notes').val('');
+                    }
+                });
+            } else {
+                $('#name').val('');
+                $('#address').val('');
+                $('#address-description').val('');
+                $('#notes').val('');
+            }
+        });
+    
+        function generateUUID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0,
+                    v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        
+        $('#order-form').on('submit', function(event) {
+            event.preventDefault();
+            
+            var orderDetails = $('#order-details').val();
+            var phone = $('#phone').val();
+            var name = $('#name').val();
+            var address = $('#address').val();
+            var addressDescription = $('#address-description').val();
+            var notes = $('#notes').val();
+            var zone = $('#zone').val();
+            var discount = $('#discount').val();
+            var tocost = parseFloat($('#total-price-input').val());
+            var orderId = generateUUID();
+            if (isNaN(tocost)) tocost = 0;
+    
+            var csrfToken = $('input[name="csrf_token"]').val();
+        
+            // افترض أن الوجبات مفصولة بعلامة "|"
+            var meals = orderDetails.split('\n').map(meal => meal.trim()).join('|');
+            
+            var submitButton = $(this).find('button[type="submit"]');
+            var loadingMessage = $('<div class="loading-message"><div class="spinner"></div><span>الطلب قيد المعالجة، يرجى الانتظار...</span></div>');
+            
+            $(this).append(loadingMessage);
+            submitButton.prop('disabled', true);
+            submitButton.css('background-color', '#f39c12');
+        
+            $.ajax({
+                url: '/make-order',
+                type: 'POST',
+                data: {
+                    order_id: orderId,
+                    order: meals,
+                    phone: phone,
+                    name: name,
+                    address: address,
+                    address_description: addressDescription,
+                    note: notes,
+                    zone: zone,
+                    discount: discount,
+                    tocost: tocost,
+                    csrf_token: csrfToken // إرسال رمز CSRF مع البيانات
+                },
+                success: function(response) {
+                    let message = response.message || 'تم استلام الطلب بنجاح';
+                    if (response.print_status === false) {
+                        message += '، ولكن فشلت الطباعة. تأكد من تشغيل الطابعة.';
+                    }
+                    alert(message);
+                    $('#order-form')[0].reset();
+                    submitButton.prop('disabled', false);
+                    submitButton.css('background-color', '');
+                    document.body.classList.remove("no-scroll");
+                    $('#form-overlay').addClass("hidden");
+                    $('#order-form').addClass("hidden");
+                    loadingMessage.remove();
+                    window.location.reload();
+                },
+                error: function() {
+                    alert('حدث خطأ أثناء إرسال الطلب');
+                    submitButton.prop('disabled', false);
+                    submitButton.css('background-color', '');
+                    loadingMessage.remove();
+                }
+            });            
+        });   
+        updateOrderSummary(); // تحديث ملخص الطلب عند تحميل الصفحة
+    });
+    
+    
+
+
+    function goDirectToMenu() {
+        document.getElementById("menu-container-han").style.display = "block";
+        document.body.classList.add("no-scroll");
+        document.getElementById("location-button").disabled = false;
+    }
+    
+    document.getElementById("direct-menu-nav").addEventListener("click", goDirectToMenu);
+    
+        
+</script>
+</body>
+</html>

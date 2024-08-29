@@ -1,0 +1,1119 @@
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:905: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:905: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:920: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:920: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:920: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:926: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:926: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:926: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:926: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:926: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:926: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:926: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:926: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:926: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("DejaVu", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:955: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:969: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:969: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:956: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+Exception in thread Thread-61 (export_data_task):
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python312\Lib\threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 1596, in export_data_task
+    wb = load_workbook(file_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\openpyxl\reader\excel.py", line 346, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\zipfile\__init__.py", line 1349, in __init__
+    self._RealGetContents()
+  File "C:\Program Files\Python312\Lib\zipfile\__init__.py", line 1446, in _RealGetContents
+    raise BadZipFile("Bad magic number for central directory")
+zipfile.BadZipFile: Bad magic number for central directory
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    @app.route('/get_customer_data', methods=['GET'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+Traceback (most recent call last):
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 647, in <module>
+    username = session['username']
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask\sansio\app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: get_customer_data
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1015: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1005: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:992: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1067: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1067: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1067: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1067: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1067: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1067: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1054: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1094: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1081: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1094: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1136: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1156: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 1817
+    time_clause, time_params = get_time_period_clause(time_period, start_date, end_date)
+                                                                                        ^
+IndentationError: unindent does not match any outer indentation level
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 1817
+    time_clause, time_params = get_time_period_clause(time_period, start_date, end_date)
+                                                                                        ^
+IndentationError: unindent does not match any outer indentation level
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 1817
+    time_clause, time_params = get_time_period_clause(time_period, start_date, end_date)
+                                                                                        ^
+IndentationError: unindent does not match any outer indentation level
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 1817
+    time_clause, time_params = get_time_period_clause(time_period, start_date, end_date)
+                                                                                        ^
+IndentationError: unindent does not match any outer indentation level
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 1817
+    time_clause, time_params = get_time_period_clause(time_period, start_date, end_date)
+                                                                                        ^
+IndentationError: unindent does not match any outer indentation level
+  File "C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py", line 1817
+    time_clause, time_params = get_time_period_clause(time_period, start_date, end_date)
+                                                                                        ^
+IndentationError: unindent does not match any outer indentation level
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\fpdf\__init__.py:39: UserWarning: You have both PyFPDF & fpdf2 installed. Both packages cannot be installed at the same time as they share the same module namespace. To only keep fpdf2, run: pip uninstall --yes pypdf && pip install --upgrade fpdf2
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\venv\Lib\site-packages\flask_limiter\extension.py:333: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)
+C:\Users\mohammed\Desktop\CHICKEN EXPRESS - Copy\main.py:1143: DeprecationWarning: "uni" parameter is deprecated since v2.5.1, unused and will soon be removed
+  pdf.add_font("Arial", "", font_path, uni=True)

@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>CHICKEN EXPRESS Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .employee-name {
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+        .navbar-options {
+            display: flex;
+        }
+
+        .navbar-option {
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .home-btn-nav {
+            font-weight: bold;
+        }
+
+        .search-box, .search-box-order {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 72px;
+        }
+
+        .search-input-order {
+            width: 400px;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding-left: 20px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-input-order:focus {
+            border-color: #007bff;
+        }
+
+        .search-box i, .search-box-order i {
+            margin-left: -30px;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin: 20px;
+        }
+
+        .card-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-info {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-info i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .card-note {
+            margin-top: 10px;
+            color: #888;
+        }
+
+        .card-buttons {
+            display: inline-flex;
+        }
+
+        .edit-button, .request-button {
+            padding: 5px 10px;
+            background-color: transparent;
+            border: 1px solid #007bff;
+            color: #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .edit-button:hover, .request-button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 40%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        #customer-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .modal-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #save-changes-button, #save-new-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #save-changes-button:hover, #save-new-button:hover {
+            background-color: #45a049;
+        }
+
+        .select-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .select-wrapper select {
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .select-wrapper::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #888;
+            pointer-events: none;
+        }
+
+        .card-add-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .card-add-button i {
+            font-size: 60px;
+            color: #007bff;
+        }
+
+        .menu-container-han {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            display: none;
+            overflow-y: auto;
+            padding-top: 60px;
+        }
+
+        nav {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px 20px;
+            background-color: #28a74596;
+            border: 1px solid #28a745;
+            border-radius: 11px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            margin-right: -18px;
+        }
+        
+        nav a:hover {
+            background-color: #218838;
+            color: #ffffff;
+        }
+
+
+        .restaurant-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            padding-bottom: 75px;
+            padding-left: 152px;
+        }
+
+        .menu-category {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .menu-item {
+            text-align: center;
+            width: 250px;
+            margin: 20px;
+        }
+
+        .item-image img {
+            width: 188px;
+            height: 154px;
+            object-fit: cover;
+            border-radius: 20%;
+        }
+
+        .item-details {
+            margin-top: 10px;
+        }
+
+        .item-details h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .item-details p {
+            margin: 0;
+        }
+
+        .add-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .quantity {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quantity-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #order-summary {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 244px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 90%;
+            overflow: scroll;
+        }
+        
+
+        #order-summary h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        #order-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+        }
+
+        #order-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #total-price {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+        }
+
+        #total-price span {
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        #confirm-order-button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #confirm-order-button:hover {
+            background-color: #218838;
+        }
+
+        /* CSS للنموذج العائم */
+        #order-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        #order-form h2 {
+            margin-top: 0;
+            font-size: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        #order-form label {
+            display: block;
+            margin-bottom: 2px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #order-form input,
+        #order-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        #order-form input:focus,
+        #order-form textarea:focus {
+            border-color: #007bff;
+            background-color: #fff;
+        }
+
+        #order-form button[type="submit"],
+        #close-form-button {
+            width: calc(50% - 10px);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #order-form button[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #order-form button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        #close-form-button {
+            background-color: #ff6b6b;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        #close-form-button:hover {
+            background-color: #e63946;
+        }
+
+        #order-details {
+            resize: none;
+            height: 100px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+        
+        
+        #close-form-button {
+            background-color: #dd761b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #close-form-button:hover {
+            background-color: #e8b20e;
+        }
+
+        #close-form-button i {
+            margin-left: 5px;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        .export-adata {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .export-adata-btn {
+            display: block;
+            background-color: #007bff;
+            border-radius: 5px;
+            padding: 10px 20px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            margin: 20px auto;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .export-adata-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .chckph-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .chckph-modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            max-height: 90%;
+            top: -127px;
+            position: fixed;
+            right: 427px;
+        }
+
+        .chckph-close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: fixed;
+            top: 113px;
+        }
+
+        .chckph-close:hover,
+        .chckph-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .chckph-form-group {
+            margin-bottom: 15px;
+        }
+
+        .chckph-form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .chckph-form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chckph-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .chckph-button:hover {
+            background-color: #0056b3;
+        }
+
+        #chckph-result {
+            margin-top: 20px;
+        }
+
+        .chckph-form {
+            direction: rtl;
+        }
+
+        .form-order-select {
+            width: 96%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-order-select:focus {
+            border-color: #5cb85c;
+        }    
+
+        .ediOrdrtextar {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .editOrderClose {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 7px;
+            cursor: pointer;
+        }
+
+        .editOrder-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="employee-name">
+            {{ username }}
+        </div>
+        <div class="navbar-options">
+            <div class="navbar-option">
+                Menu
+            </div>
+            <div class="navbar-option" onclick="redirectToCustomer()">
+                Customers
+            </div>
+            <div class="navbar-option home-btn-nav">
+                Home
+            </div>
+        </div>
+    </div>
+    
+    <h1 class="export-adata">Export Data to Excel</h1>
+    <form action="/export" method="post">
+        <button type="submit" class="export-adata-btn">Export</button>
+    </form>
+    
+    <div class="search-box-order">
+        <input type="text" class="search-input-order" placeholder="Find order">
+        <i class="fas fa-search"></i>
+    </div>
+    
+    <div class="card-container">
+        {% for order in order_data %}
+        {% if order.name or order.phone or order.order or order.address or order.note or order.status or order.zone or order.discount or order.employee_name or order.total_cost %}
+        <div class="card">
+            <div class="card-header">
+                <span class="customer-name">{{ order.ordercode }}</span>
+                <div class="card-buttons">
+                    {% if order.status == "new" %}
+                    <button id="edit-ordercard-button" class="edit-button" data-phone="{{ order.phone }}">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    {% endif %}
+                </div>
+            </div>
+            {% if order.phone %}
+            <div class="card-info">
+                <i class="fas fa-phone"></i>
+                <span>{{ order.phone }}</span>
+            </div>
+            {% endif %}
+            {% if order.name %}
+            <div class="card-info">
+                <i class="fas fa-user"></i>
+                <span>{{ order.name }}</span>
+            </div>
+            {% endif %}
+            {% if order.order %}
+            <div class="card-info">
+                <i class="fas fa-utensils"></i>
+                <span>{{ order.order }}</span>
+            </div>
+            {% endif %}
+            {% if order.address %}
+            <div class="card-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>{{ order.address }}</span>
+            </div>
+            {% endif %}
+            {% if order.date %}
+            <div class="card-info">
+                <i class="far fa-calendar"></i>
+                <span>{{ order.date }}</span>
+            </div>
+            {% endif %}
+            {% if order.time %}
+            <div class="card-info">
+                <i class="far fa-clock"></i>
+                <span>{{ order.time }}</span>
+            </div>
+            {% endif %}
+            {% if order.status %}
+            <div class="card-info">
+                <i class="fas fa-info-circle"></i>
+                <span>{{ order.status }}</span>
+            </div>
+            {% endif %}
+            {% if order.zone %}
+            <div class="card-info">
+                <i class="fas fa-route"></i>
+                <span>{{ order.zone }}</span>
+            </div>
+            {% endif %}
+            {% if order.discount %}
+            <div class="card-info">
+                <i class="fas fa-percentage"></i>
+                <span>{{ order.discount }}</span>
+            </div>
+            {% endif %}
+            {% if order.employee_name %}
+            <div class="card-info">
+                <i class="fas fa-user-tie"></i>
+                <span>{{ order.employee_name }}</span>
+            </div>
+            {% endif %}
+            {% if order.total_cost %}
+            <div class="card-info">
+                <i class="fas fa-dollar-sign"></i>
+                <span>{{ order.total_cost }}</span>
+            </div>
+            {% endif %}
+            {% if order.note %}
+            <div class="card-note">
+                <i class="fas fa-sticky-note"></i>
+                <span>{{ order.note }}</span>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    
+        <div class="card" style="cursor: pointer;" id="chckph-makeOrderPhone">
+            <div class="card-header">
+                <div class="card-add-button">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="menu-container-han" id="menu-container-han">
+        <nav>
+            <a href="#main-dishes">الوجبات الرئيسية</a>
+            <a href="#snacks">الوجبات الخفيفة</a>
+            <a href="#appetizers">المقبلات</a>
+            <a href="#beverages">المشروبات</a>
+        </nav>
+    
+        <div id="order-summary">
+            <h2>الطلب</h2>
+            <ul id="order-list"></ul>
+            <p id="total-price">السعر الإجمالي: <span>0</span> دينار</p>
+            <button id="confirm-order-button">تأكيد الطلب</button>
+        </div>
+    
+        <div class="overlay hidden" id="form-overlay"></div>
+    
+        <form id="order-form" class="hidden">
+            <h2>تأكيد الطلب</h2>
+            <label for="order-details">تفاصيل الطلب:</label>
+            <textarea id="order-details" name="order-details" readonly rows="5"></textarea>
+    
+            <label for="zone">اختر المنطقة:</label>
+            <select id="zone" name="zone" class="form-order-select" required>
+                <option value="داخل الزون">داخل الزون</option>
+                <option value="خارج الزون">خارج الزون</option>
+            </select>
+    
+            <label for="discount">اختر نسبة الخصم:</label>
+            <select id="discount" name="discount" class="form-order-select">
+                <option value="0%">لا يوجد خصم</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="50%">50%</option>
+            </select>
+    
+            <label for="phone">رقم الهاتف:</label>
+            <input type="text" id="phone" name="phone" required>
+    
+            <label for="address">العنوان:</label>
+            <input type="text" id="address" name="address" required>
+    
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="notes">ملاحظات:</label>
+            <textarea id="notes" name="notes"></textarea>
+    
+            <input type="text" id="total-price-input" name="total-price" style="position: fixed;top: 45px;right: 2px;width: 150px;background-color: transparent;border: transparent;color: #15a210;">
+    
+            <button type="submit">إرسال الطلب</button>
+            <button type="button" id="close-form-button"><i class="fas fa-arrow-right"></i> إغلاق</button>
+        </form>
+    
+        <div class="restaurant-menu">
+            <div class="menu-category">
+                <h2 id="main-dishes">الوجبات الرئيسية</h2>
+            </div>
+            {% for row in menu %}
+            {% if row[4] == 1 and row[6] == "وجبة" %}
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="static/{{ row[5] }}" alt="{{ row[1] }}">
+                </div>
+                <div class="item-details">
+                    <h2>{{ row[1] }}</h2>
+                    <p>وصف: {{ row[2] }}</p>
+                    <p>سعر: {{ row[3] }} دينار</p>
+                    <button class="add-button" onclick="toggleAddButton(this)">إضافة</button>
+                    <div class="quantity hidden">
+                        <button class="quantity-button" onclick="decreaseQuantity(this)">-</button>
+                        <span>0</span>
+                        <button class="quantity-button" onclick="increaseQuantity(this)">+</button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+    
+            <div class="menu-category">
+                <h2 id="snacks">الوجبات السريعة</h2>
+            </div>
+            {% for row in menu %}
+            {% if row[4] == 1 and row[6] == "سريعة" %}
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="static/{{ row[5] }}" alt="{{ row[1] }}">
+                </div>
+                <div class="item-details">
+                    <h2>{{ row[1] }}</h2>
+                    <p>وصف: {{ row[2] }}</p>
+                    <p>سعر: {{ row[3] }} دينار</p>
+                    <button class="add-button" onclick="toggleAddButton(this)">إضافة</button>
+                    <div class="quantity hidden">
+                        <button class="quantity-button" onclick="decreaseQuantity(this)">-</button>
+                        <span>0</span>
+                        <button class="quantity-button" onclick="increaseQuantity(this)">+</button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+    
+            <div class="menu-category">
+                <h2 id="appetizers">المقبلات</h2>
+            </div>
+            {% for row in menu %}
+            {% if row[4] == 1 and row[6] == "مقبلات" %}
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="static/{{ row[5] }}" alt="{{ row[1] }}">
+                </div>
+                <div class="item-details">
+                    <h2>{{ row[1] }}</h2>
+                    <p>وصف: {{ row[2] }}</p>
+                    <p>سعر: {{ row[3] }} دينار</p>
+                    <button class="add-button" onclick="toggleAddButton(this)">إضافة</button>
+                    <div class="quantity hidden">
+                        <button class="quantity-button" onclick="decreaseQuantity(this)">-</button>
+                        <span>0</span>
+                        <button class="quantity-button" onclick="increaseQuantity(this)">+</button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+    
+            <div class="menu-category">
+                <h2 id="beverages">المشروبات</h2>
+            </div>
+            {% for row in menu %}
+            {% if row[4] == 1 and row[6] == "مشروب" %}
+            <div class="menu-item">
+                <div class="item-image">
+                    <img src="static/{{ row[5] }}" alt="{{ row[1] }}">
+                </div>
+                <div class="item-details">
+                    <h2>{{ row[1] }}</h2>
+                    <p>وصف: {{ row[2] }}</p>
+                    <p>سعر: {{ row[3] }} دينار</p>
+                    <button class="add-button" onclick="toggleAddButton(this)">إضافة</button>
+                    <div class="quantity hidden">
+                        <button class="quantity-button" onclick="decreaseQuantity(this)">-</button>
+                        <span>0</span>
+                        <button class="quantity-button" onclick="increaseQuantity(this)">+</button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    
+    <button id="chckph-makeOrderPhone" class="chckph-button">Make Order</button>
+    
+    <div id="chckph-myModal" class="chckph-modal">
+        <div class="chckph-modal-content">
+            <span class="chckph-close">&times;</span>
+            <form id="chckph-phoneForm" class="chckph-form">
+                <div class="chckph-form-group">
+                    <label for="chckph-phone">رقم الهاتف:</label>
+                    <input type="text" id="chckph-phone" name="chckph-phone" required>
+                </div>
+                <button type="submit" class="chckph-button">إرسال</button>
+            </form>
+            <div id="chckph-result"></div>
+        </div>
+    </div>
+    
+    <div id="editOrderForm" class="editOrder-modal">
+        <div class="chckph-modal-content">
+            <span class="editOrderClose">&times;</span>
+            <form id="editOrderDetails" class="chckph-form">
+                <div class="chckph-form-group">
+                    <label for="ediOrdrOrder">الطلب:</label>
+                    <textarea id="ediOrdrOrder" name="order" rows="3" readonly class="ediOrdrtextar"></textarea>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrPhone">رقم الهاتف:</label>
+                    <input type="text" id="ediOrdrPhone" name="phone" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrName">الاسم:</label>
+                    <input type="text" id="ediOrdrName" name="name" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrAddress">العنوان:</label>
+                    <input type="text" id="ediOrdrAddress" name="address" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrNote">الملاحظة:</label>
+                    <input type="text" id="ediOrdrNote" name="note" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrZone">اختر المنطقة:</label>
+                    <select id="ediOrdrZone" name="zone" class="form-order-select">
+                        <option value="داخل الزون">داخل الزون</option>
+                        <option value="خارج الزون">خارج الزون</option>
+                    </select>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrDiscount">اختر نسبة الخصم:</label>
+                    <select id="ediOrdrDiscount" name="discount" class="form-order-select">
+                        <option value="0%">لا يوجد خصم</option>
+                        <option value="10%">10%</option>
+                        <option value="20%">20%</option>
+                        <option value="30%">30%</option>
+                        <option value="50%">50%</option>
+                    </select>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrEmployeeName">اسم الموظف:</label>
+                    <input type="text" id="ediOrdrEmployeeName" name="employee_name" readonly>
+                </div>
+                <div class="chckph-form-group">
+                    <label for="ediOrdrTotalCost">السعر الإجمالي:</label>
+                    <input type="text" id="ediOrdrTotalCost" name="total_cost" readonly>
+                </div>
+                <div class="chckph-form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <button type="button" class="chckph-button" onclick="updateOrder()">تعديل الطلب</button>
+                        <button type="button" class="chckph-button" onclick="editMeals()">تعديل الوجبات</button>
+                    </div>
+                    <button type="button" class="chckph-button" onclick="printOrder()">
+                        <i class="fas fa-print"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        
+        var isEditingOrder = false;
+
+        $(document).ready(function() {
+            // Function to fetch order details
+            function fetchOrderDetails(orderCode) {
+                $.ajax({
+                    url: '/get_order_by_code',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ order_code: orderCode }),
+                    success: function(data) {
+                        if (data.error) {
+                            alert(data.error);
+                        } else {
+                            $('#ediOrdrPhone').val(data.phone);
+                            $('#ediOrdrName').val(data.name);
+                            $('#ediOrdrOrder').val(data.order);
+                            $('#ediOrdrAddress').val(data.address);
+                            $('#ediOrdrStatus').val(data.status);
+                            $('#ediOrdrNote').val(data.note);
+                            $('#ediOrdrZone').val(data.zone);
+                            $('#ediOrdrDiscount').val(data.discount);
+                            $('#ediOrdrEmployeeName').val(data.employee_name);
+                            $('#ediOrdrTotalCost').val(data.total_cost);
+                            $('#editOrderForm').show();
+
+                            // Call function to populate menu items
+                            editMeals(data.order);
+                            isEditingOrder = true; // تحديد حالة الطلب كـ "تعديل"
+                            updateConfirmButton();
+                            updateCloseButton();
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
+            }
+
+            // Event listener for edit button click
+            $('.edit-button').click(function() {
+                var orderCode = $(this).closest('.card').find('.customer-name').text();
+                fetchOrderDetails(orderCode);
+            });
+
+            // Close modal
+            $('.editOrderClose').click(function() {
+                $('#editOrderForm').hide();
+            });
+
+            function editMeals(orderDetails) {
+                document.getElementById("menu-container-han").style.display = "block";
+                
+                // Reset quantities and disable the buttons
+                var quantities = document.querySelectorAll('.quantity span');
+                quantities.forEach(function(span) {
+                    span.innerHTML = "0";
+                    var quantityButtons = span.parentNode.querySelectorAll("button");
+                    quantityButtons.forEach(function(button) {
+                        button.disabled = false; // تعديل لتفعيل الأزرار
+                    });
+                });
+
+                // Split the order details into individual items
+                var items = orderDetails.split("\n");
+                items.forEach(function(item) {
+                    var parts = item.split(" x ");
+                    var quantity = parts[0].trim();
+                    var itemName = parts[1].split(" (")[0].trim();
+
+                    // Find the menu item with the corresponding name
+                    var menuItems = document.querySelectorAll('.menu-item');
+                    menuItems.forEach(function(menuItem) {
+                        var name = menuItem.querySelector("h2").innerHTML.trim();
+                        if (name === itemName) {
+                            var addButton = menuItem.querySelector(".add-button");
+                            var quantityDiv = addButton.nextElementSibling;
+                            var quantitySpan = quantityDiv.querySelector("span");
+
+                            // Set the quantity and update the UI
+                            quantitySpan.innerHTML = quantity;
+                            addButton.classList.add("hidden");
+                            quantityDiv.classList.remove("hidden");
+
+                            // Enable the + and - buttons
+                            var quantityButtons = quantityDiv.querySelectorAll("button");
+                            quantityButtons.forEach(function(button) {
+                                button.disabled = false; // تعديل لتفعيل الأزرار
+                            });
+                        }
+                    });
+                });
+
+                updateOrderSummary();
+            }
+
+            function decreaseQuantity(button) {
+                var quantitySpan = button.nextElementSibling;
+                var quantity = parseInt(quantitySpan.innerHTML);
+                if (quantity > 0) {
+                    quantity--;
+                    quantitySpan.innerHTML = quantity;
+                    if (quantity === 0) {
+                        var quantityDiv = button.parentNode;
+                        quantityDiv.classList.add("hidden");
+                        var addButton = quantityDiv.parentNode.querySelector(".add-button");
+                        addButton.classList.remove("hidden");
+                    }
+                    updateOrderSummary();
+                }
+            }
+
+            function increaseQuantity(button) {
+                var quantitySpan = button.previousElementSibling;
+                var quantity = parseInt(quantitySpan.innerHTML);
+                quantity++;
+                quantitySpan.innerHTML = quantity;
+                updateOrderSummary();
+            }
+
+            function updateOrderSummary() {
+                var orderList = document.getElementById("order-list");
+                var totalPriceSpan = document.querySelector("#total-price span");
+                var totalPriceInput = document.getElementById("total-price-input");
+
+                orderList.innerHTML = "";
+                var menuItems = document.querySelectorAll(".menu-item");
+                baseTotal = 0; // إعادة تعيين السعر الأساسي الإجمالي
+                var orderDetailsArray = [];
+
+                menuItems.forEach(function(menuItem) {
+                    var quantitySpan = menuItem.querySelector(".quantity span");
+                    var quantity = parseInt(quantitySpan.innerHTML);
+
+                    if (quantity > 0) {
+                        var itemName = menuItem.querySelector("h2").innerHTML;
+                        var price = parseFloat(menuItem.querySelector("p:nth-child(3)").innerHTML.split(': ')[1]);
+                        if (isNaN(price)) price = 0;
+                        var itemTotalPrice = quantity * price;
+
+                        var listItem = document.createElement("li");
+                        listItem.innerHTML = quantity + " x " + itemName + " (" + itemTotalPrice.toFixed(2) + " دينار)";
+                        orderList.appendChild(listItem);
+
+                        baseTotal += itemTotalPrice; // تحديث السعر الأساسي الإجمالي
+                        orderDetailsArray.push(quantity + " x " + itemName + " (" + itemTotalPrice.toFixed(2) + " دينار)");
+                    }
+                });
+
+                totalPriceSpan.innerHTML = baseTotal.toFixed(2);
+                totalPriceInput.value = baseTotal.toFixed(2); // تحديث المدخل للسعر الأساسي الإجمالي
+                document.getElementById("order-details").value = orderDetailsArray.join("\n");
+            }
+
+            // Function to handle new order creation
+            function createNewOrder() {
+                document.getElementById("chckph-result").innerHTML = `
+                    <form id="chckph-newOrderForm" class="chckph-form">
+                        <div class="chckph-form-group">
+                            <label for="chckph-newOrder">الطلب:</label>
+                            <input type="text" id="chckph-newOrder" name="order" required>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-newPhone">رقم الهاتف:</label>
+                            <input type="text" id="chckph-newPhone" name="phone" required>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-newName">الاسم:</label>
+                            <input type="text" id="chckph-newName" name="name" required>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-newLocation">العنوان:</label>
+                            <input type="text" id="chckph-newLocation" name="address" required>
+                        </div>
+                        <div class="chckph-form-group">
+                            <label for="chckph-newNote">الملاحظة:</label>
+                            <input type="text" id="chckph-newNote" name="note">
+                        </div>
+                        <button type="button" class="chckph-button" onclick="submitNewOrderForm()">إضافة الطلب</button>
+                    </form>
+                `;
+            }
+
+            // Function to handle new order submission
+            function submitNewOrderForm() {
+                var form = document.getElementById('chckph-newOrderForm');
+                var formData = new FormData(form);
+
+                fetch('/make-order', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            }
+
+            // Event listener for confirm order button
+            document.getElementById("confirm-order-button").addEventListener("click", function() {
+                var orderDetails = [];
+                var orderListItems = document.querySelectorAll("#order-list li");
+                orderListItems.forEach(function(item) {
+                    orderDetails.push(item.innerHTML);
+                });
+                document.getElementById("order-details").value = orderDetails.join("\n");
+
+                document.getElementById("form-overlay").classList.remove("hidden");
+                document.getElementById("order-form").classList.remove("hidden");
+                document.body.classList.add("no-scroll");
+                document.querySelectorAll("button, input, textarea").forEach(function(element) {
+                    element.disabled = true;
+                });
+                document.getElementById("close-form-button").disabled = false;
+                document.querySelectorAll("#order-form input, #order-form textarea").forEach(function(element) {
+                    element.disabled = false;
+                });
+                document.querySelector("#order-form button[type='submit']").disabled = false;
+
+                updateFinalPrice(); // تحديث السعر النهائي عند فتح النموذج
+            });
+
+            // Event listener for close form button
+            document.getElementById("close-form-button").addEventListener("click", function() {
+                document.getElementById("form-overlay").classList.add("hidden");
+                document.getElementById("order-form").classList.add("hidden");
+                document.body.classList.remove("no-scroll");
+                document.querySelectorAll("button, input, textarea").forEach(function(element) {
+                    element.disabled = false;
+                });
+            });
+
+            // Event listener for phone input
+            $('#phone').on('input', function() {
+                var phone = $(this).val();
+                if (phone.length > 0) {
+                    $.ajax({
+                        url: '/get_customer_data',
+                        type: 'GET',
+                        data: { phone: phone },
+                        success: function(response) {
+                            $('#name').val(response.Cname);
+                            $('#address').val(response.Caddress);
+                            $('#notes').val(response.Cnote);
+                        },
+                        error: function() {
+                            $('#name').val('');
+                            $('#address').val('');
+                            $('#notes').val('');
+                        }
+                    });
+                } else {
+                    $('#name').val('');
+                    $('#address').val('');
+                    $('#notes').val('');
+                }
+            });
+
+            // Event listener for order form submission
+            $('#order-form').on('submit', function(event) {
+                event.preventDefault();
+                var orderDetails = $('#order-details').val();
+                var phone = $('#phone').val();
+                var name = $('#name').val();
+                var address = $('#address').val();
+                var notes = $('#notes').val();
+                var zone = $('#zone').val();
+                var discount = $('#discount').val();
+                var tocost = parseFloat($('#total-price-input').val());
+                if (isNaN(tocost)) tocost = 0;
+
+                var submitButton = $(this).find('button[type="submit"]');
+                submitButton.css('background-color', '#f39c12');
+
+                $.ajax({
+                    url: '/make-order',
+                    type: 'POST',
+                    data: {
+                        order: orderDetails,
+                        phone: phone,
+                        name: name,
+                        address: address,
+                        note: notes,
+                        zone: zone,
+                        discount: discount,
+                        tocost: tocost
+                    },
+                    success: function(response) {
+                        alert(response);
+                        $('#order-form')[0].reset();
+                        submitButton.css('background-color', '');
+                        document.body.classList.remove("no-scroll");
+                        document.getElementById("form-overlay").classList.add("hidden");
+                        document.getElementById("order-form").classList.add("hidden");
+                        document.querySelectorAll("button, input, textarea").forEach(function(element) {
+                            element.disabled = false;
+                        });
+                        window.location.reload();
+                    },
+                    error: function() {
+                        alert('حدث خطأ أثناء إرسال الطلب');
+                        submitButton.css('background-color', '');
+                    }
+                });
+            });
+
+            // تحديث ملخص الطلب عند تحميل الصفحة
+            updateOrderSummary();
+        });
+
+        function toggleAddButton(button) {
+            button.classList.add("hidden");
+            var quantityDiv = button.nextElementSibling;
+            var quantitySpan = quantityDiv.querySelector("span");
+            quantitySpan.innerHTML = "1";
+            quantityDiv.classList.remove("hidden");
+            var quantityButtons = quantityDiv.getElementsByTagName("button");
+            for (var i = 0; i < quantityButtons.length; i++) {
+                quantityButtons[i].addEventListener("click", handleQuantityButtonClick);
+                quantityButtons[i].disabled = false;
+            }
+            updateOrderSummary();
+        }
+
+        function handleQuantityButtonClick(event) {
+            var button = event.target;
+            var quantitySpan = button.parentNode.querySelector("span");
+            var quantity = parseInt(quantitySpan.innerHTML);
+
+            if (button.classList.contains("quantity-button")) {
+                if (button.innerHTML === "+") {
+                    quantity++;
+                } else if (button.innerHTML === "-") {
+                    if (quantity > 0) {
+                        quantity--;
+                    }
+                }
+                quantitySpan.innerHTML = quantity;
+            }
+
+            if (quantity === 0 && !button.classList.contains("add-button")) {
+                var quantityDiv = button.parentNode;
+                quantityDiv.classList.add("hidden");
+                var addButton = quantityDiv.parentNode.querySelector(".add-button");
+                addButton.classList.remove("hidden");
+            }
+
+            updateOrderSummary();
+        }
+
+        var baseTotal = 0; // متغير لحفظ السعر الأساسي الإجمالي
+
+        function updateOrderSummary() {
+            var orderList = document.getElementById("order-list");
+            var totalPriceSpan = document.querySelector("#total-price span");
+            var totalPriceInput = document.getElementById("total-price-input");
+
+            orderList.innerHTML = "";
+            var menuItems = document.querySelectorAll(".menu-item");
+            baseTotal = 0; // إعادة تعيين السعر الأساسي الإجمالي
+            var orderDetailsArray = [];
+
+            menuItems.forEach(function(menuItem) {
+                var quantitySpan = menuItem.querySelector(".quantity span");
+                var quantity = parseInt(quantitySpan.innerHTML);
+
+                if (quantity > 0) {
+                    var itemName = menuItem.querySelector("h2").innerHTML;
+                    var price = parseFloat(menuItem.querySelector("p:nth-child(3)").innerHTML.split(': ')[1]);
+                    if (isNaN(price)) price = 0;
+                    var itemTotalPrice = quantity * price;
+
+                    var listItem = document.createElement("li");
+                    listItem.innerHTML = quantity + " x " + itemName + " (" + itemTotalPrice.toFixed(2) + " دينار)";
+                    orderList.appendChild(listItem);
+
+                    baseTotal += itemTotalPrice; // تحديث السعر الأساسي الإجمالي
+                    orderDetailsArray.push(quantity + " x " + itemName + " (" + itemTotalPrice.toFixed(2) + " دينار)");
+                }
+            });
+
+            totalPriceSpan.innerHTML = baseTotal.toFixed(2);
+            totalPriceInput.value = baseTotal.toFixed(2); // تحديث المدخل للسعر الأساسي الإجمالي
+            document.getElementById("order-details").value = orderDetailsArray.join("\n");
+        }
+
+        function updateFinalPrice() {
+            var finalPrice = baseTotal; // استخدام السعر الأساسي الإجمالي للحسابات
+
+            // حساب تكلفة المنطقة
+            var zone = document.getElementById("zone").value;
+            if (zone === "داخل الزون") {
+                finalPrice += 2000;
+            } else if (zone === "خارج الزون") {
+                finalPrice += 3000;
+            }
+
+            // حساب الخصم
+            var discount = parseFloat(document.getElementById("discount").value);
+            if (isNaN(discount)) discount = 0;
+            var discountAmount = (finalPrice * discount) / 100;
+            finalPrice -= discountAmount;
+
+            if (isNaN(finalPrice)) finalPrice = 0;
+
+            document.getElementById("total-price-input").value = finalPrice.toFixed(2);
+        }
+
+        document.getElementById("zone").addEventListener("change", updateFinalPrice);
+        document.getElementById("discount").addEventListener("change", updateFinalPrice);
+
+        document.getElementById("chckph-makeOrderPhone").onclick = function() {
+            document.getElementById("chckph-myModal").style.display = "block";
+            document.body.classList.add("no-scroll");
+            isEditingOrder = false; // تحديد حالة الطلب كـ "إضافة جديد"
+            updateConfirmButton();
+            updateCloseButton();
+        }
+
+        document.getElementsByClassName("chckph-close")[0].onclick = function() {
+            document.getElementById("chckph-myModal").style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+
+        document.getElementById("chckph-phoneForm").onsubmit = function(event) {
+            event.preventDefault();
+            var phone = document.getElementById("chckph-phone").value;
+            fetch('/checkPhone', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ phone: phone }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var resultDiv = document.getElementById("chckph-result");
+                if (data.length > 0) {
+                    var order = data[0];
+                    resultDiv.innerHTML = `
+                        <form id="chckph-orderForm" class="chckph-form">
+                            <div class="chckph-form-group">
+                                <label for="chckph-order">الطلب:</label>
+                                <input type="text" id="chckph-order" name="order" value="${order.order}" required>
+                            </div>
+                            <div class="chckph-form-group">
+                                <label for="chckph-phone-result">رقم الهاتف:</label>
+                                <input type="text" id="chckph-phone-result" name="phone" value="${order.Cphone}" required>
+                            </div>
+                            <div class="chckph-form-group">
+                                <label for="chckph-name">الاسم:</label>
+                                <input type="text" id="chckph-name" name="name" value="${order.Cname}" required>
+                            </div>
+                            <div class="chckph-form-group">
+                                <label for="chckph-location">العنوان:</label>
+                                <input type="text" id="chckph-location" name="address" value="${order.location}" required>
+                            </div>
+                            <div class="chckph-form-group">
+                                <label for="chckph-note">الملاحظة:</label>
+                                <input type="text" id="chckph-note" name="note" value="${order.note}">
+                            </div>
+                            <div class="chckph-form-group">
+                                <label for="chckph-zone">اختر المنطقة:</label>
+                                <select id="chckph-zone" name="zone" class="form-order-select" required>
+                                    <option value="داخل الزون">داخل الزون</option>
+                                    <option value="خارج الزون">خارج الزون</option>
+                                </select>
+                            </div>
+                            <div class="chckph-form-group">
+                                <label for="chckph-discount">اختر نسبة الخصم:</label>
+                                <select id="chckph-discount" name="discount" class="form-order-select">
+                                    <option value="0%">لا يوجد خصم</option>
+                                    <option value="10%">10%</option>
+                                    <option value="20%">20%</option>
+                                    <option value="30%">30%</option>
+                                    <option value="50%">50%</option>
+                                </select>
+                            </div>
+                            <div class="chckph-form-group">
+                                <label for="chckph-ordtocost">السعر الإجمالي:</label>
+                                <input type="text" id="chckph-ordtocost" name="tocost" value="${order.ordtocost}" readonly>
+                            </div>
+                            <button type="button" class="chckph-button" onclick="submitOrderForm()">إضافة الطلب</button>
+                            <button type="button" class="chckph-button" onclick="makeorder()">طلب جديد</button>
+                        </form>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        No results found.
+                        <button type="button" class="chckph-button" onclick="goMenuord()">طلب جديد</button>
+                    `;
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        };
+
+        function openOrderForm(phone, name, order, address, note) {
+            document.getElementById("phone").value = phone;
+            document.getElementById("name").value = name;
+            document.getElementById("order-details").value = order;
+            document.getElementById("address").value = address;
+            document.getElementById("notes").value = note;
+            document.getElementById("form-overlay").classList.remove("hidden");
+            document.getElementById("order-form").classList.remove("hidden");
+            document.body.classList.add("no-scroll");
+        }
+
+        function submitOrderForm() {
+            var form = document.getElementById('chckph-orderForm');
+            var formData = new FormData(form);
+
+            fetch('/make-order', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+
+        function createNewOrder() {
+            document.getElementById("chckph-result").innerHTML = `
+                <form id="chckph-newOrderForm" class="chckph-form">
+                    <div class="chckph-form-group">
+                        <label for="chckph-newOrder">الطلب:</label>
+                        <input type="text" id="chckph-newOrder" name="order" required>
+                    </div>
+                    <div class="chckph-form-group">
+                        <label for="chckph-newPhone">رقم الهاتف:</label>
+                        <input type="text" id="chckph-newPhone" name="phone" required>
+                    </div>
+                    <div class="chckph-form-group">
+                        <label for="chckph-newName">الاسم:</label>
+                        <input type="text" id="chckph-newName" name="name" required>
+                    </div>
+                    <div class="chckph-form-group">
+                        <label for="chckph-newLocation">العنوان:</label>
+                        <input type="text" id="chckph-newLocation" name="address" required>
+                    </div>
+                    <div class="chckph-form-group">
+                        <label for="chckph-newNote">الملاحظة:</label>
+                        <input type="text" id="chckph-newNote" name="note">
+                    </div>
+                    <button type="button" class="chckph-button" onclick="submitNewOrderForm()">إضافة الطلب</button>
+                </form>
+            `;
+        }
+
+        function submitNewOrderForm() {
+            var form = document.getElementById('chckph-newOrderForm');
+            var formData = new FormData(form);
+
+            fetch('/make-order', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+
+        function makeorder() {
+            var phone = document.getElementById("chckph-phone-result").value;
+            var name = document.getElementById("chckph-name").value;
+            var address = document.getElementById("chckph-location").value;
+            var order = document.getElementById("chckph-order").value;
+            var notes = document.getElementById("chckph-note").value;
+
+            // Set values in the second form
+            document.getElementById("phone").value = phone;
+            document.getElementById("name").value = name;
+            document.getElementById("address").value = address;
+            document.getElementById("order-details").value = order;
+            document.getElementById("notes").value = notes;
+
+            // Show the second form
+            document.getElementById("menu-container-han").style.display = "block";
+        }
+
+        function redirectToCustomer() {
+            fetch('/customerwin')
+                .then(function(response) {
+                    if (response.ok) {
+                        window.location.href = "/customerwin";
+                    } else {
+                        console.log('حدث خطأ في الطلب.');
+                    }
+                })
+                .catch(function(error) {
+                    console.log('حدث خطأ في الاتصال.', error);
+                });
+        }
+
+        function searchOrders() {
+            var input = searchInputOrder.value.toUpperCase();
+            var cards = document.querySelectorAll('.card');
+
+            cards.forEach(function(card) {
+                var orderCode = card.querySelector('.customer-name');
+                var orderCodeText = orderCode.textContent || orderCode.innerText;
+
+                var orderPhone = card.querySelector('.card-info:nth-child(2) span:nth-child(2)');
+                var orderPhoneText = orderPhone.textContent || orderPhone.innerText;
+
+                var orderName = card.querySelector('.card-info:nth-child(3) span:nth-child(2)');
+                var orderNameText = orderName.textContent || orderName.innerText;
+
+                if (orderCodeText.toUpperCase().indexOf(input) > -1 ||
+                    orderPhoneText.toUpperCase().indexOf(input) > -1 ||
+                    orderNameText.toUpperCase().indexOf(input) > -1) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        var searchInputOrder = document.querySelector('.search-input-order');
+        searchInputOrder.addEventListener('keyup', searchOrders);
+
+        function toggleAddButton(button) {
+            button.classList.add("hidden");
+            var quantityDiv = button.nextElementSibling;
+            var quantitySpan = quantityDiv.querySelector("span");
+            quantitySpan.innerHTML = "1";
+            quantityDiv.classList.remove("hidden");
+            var quantityButtons = quantityDiv.getElementsByTagName("button");
+            for (var i = 0; i < quantityButtons.length; i++) {
+                quantityButtons[i].addEventListener("click", handleQuantityButtonClick);
+                quantityButtons[i].disabled = false;
+            }
+            updateOrderSummary();
+        }
+
+        function handleQuantityButtonClick(event) {
+            var button = event.target;
+            var quantitySpan = button.parentNode.querySelector("span");
+            var quantity = parseInt(quantitySpan.innerHTML);
+
+            if (button.classList.contains("quantity-button")) {
+                if (button.innerHTML === "+") {
+                    quantity++;
+                } else if (button.innerHTML === "-") {
+                    if (quantity > 0) {
+                        quantity--;
+                    }
+                }
+                quantitySpan.innerHTML = quantity;
+            }
+
+            if (quantity === 0 && !button.classList.contains("add-button")) {
+                var quantityDiv = button.parentNode;
+                quantityDiv.classList.add("hidden");
+                var addButton = quantityDiv.parentNode.querySelector(".add-button");
+                addButton.classList.remove("hidden");
+            }
+
+            updateOrderSummary();
+        }
+
+        var baseTotal = 0; // متغير لحفظ السعر الأساسي الإجمالي
+
+        function updateOrderSummary() {
+            var orderList = document.getElementById("order-list");
+            var totalPriceSpan = document.querySelector("#total-price span");
+            var totalPriceInput = document.getElementById("total-price-input");
+
+            orderList.innerHTML = "";
+            var menuItems = document.querySelectorAll(".menu-item");
+            baseTotal = 0; // إعادة تعيين السعر الأساسي الإجمالي
+            var orderDetailsArray = [];
+
+            menuItems.forEach(function(menuItem) {
+                var quantitySpan = menuItem.querySelector(".quantity span");
+                var quantity = parseInt(quantitySpan.innerHTML);
+
+                if (quantity > 0) {
+                    var itemName = menuItem.querySelector("h2").innerHTML;
+                    var price = parseFloat(menuItem.querySelector("p:nth-child(3)").innerHTML.split(': ')[1]);
+                    if (isNaN(price)) price = 0;
+                    var itemTotalPrice = quantity * price;
+
+                    var listItem = document.createElement("li");
+                    listItem.innerHTML = quantity + " x " + itemName + " (" + itemTotalPrice.toFixed(2) + " دينار)";
+                    orderList.appendChild(listItem);
+
+                    baseTotal += itemTotalPrice; // تحديث السعر الأساسي الإجمالي
+                    orderDetailsArray.push(quantity + " x " + itemName + " (" + itemTotalPrice.toFixed(2) + " دينار)");
+                }
+            });
+
+            totalPriceSpan.innerHTML = baseTotal.toFixed(2);
+            totalPriceInput.value = baseTotal.toFixed(2); // تحديث المدخل للسعر الأساسي الإجمالي
+            document.getElementById("order-details").value = orderDetailsArray.join("\n");
+        }
+
+        function updateFinalPrice() {
+            var finalPrice = baseTotal; // استخدام السعر الأساسي الإجمالي للحسابات
+
+            // حساب تكلفة المنطقة
+            var zone = document.getElementById("zone").value;
+            if (zone === "داخل الزون") {
+                finalPrice += 2000;
+            } else if (zone === "خارج الزون") {
+                finalPrice += 3000;
+            }
+
+            // حساب الخصم
+            var discount = parseFloat(document.getElementById("discount").value);
+            if (isNaN(discount)) discount = 0;
+            var discountAmount = (finalPrice * discount) / 100;
+            finalPrice -= discountAmount;
+
+            if (isNaN(finalPrice)) finalPrice = 0;
+
+            document.getElementById("total-price-input").value = finalPrice.toFixed(2);
+        }
+
+        document.getElementById("zone").addEventListener("change", updateFinalPrice);
+        document.getElementById("discount").addEventListener("change", updateFinalPrice);
+
+        document.getElementById("confirm-order-button").addEventListener("click", function() {
+            var orderDetails = [];
+            var orderListItems = document.querySelectorAll("#order-list li");
+            orderListItems.forEach(function(item) {
+                orderDetails.push(item.innerHTML);
+            });
+            document.getElementById("order-details").value = orderDetails.join("\n");
+
+            document.getElementById("form-overlay").classList.remove("hidden");
+            document.getElementById("order-form").classList.remove("hidden");
+            document.body.classList.add("no-scroll");
+            document.querySelectorAll("button, input, textarea").forEach(function(element) {
+                element.disabled = true;
+            });
+            document.getElementById("close-form-button").disabled = false;
+            document.querySelectorAll("#order-form input, #order-form textarea").forEach(function(element) {
+                element.disabled = false;
+            });
+            document.querySelector("#order-form button[type='submit']").disabled = false;
+
+            updateFinalPrice(); // تحديث السعر النهائي عند فتح النموذج
+        });
+
+        document.getElementById("close-form-button").addEventListener("click", function() {
+            document.getElementById("form-overlay").classList.add("hidden");
+            document.getElementById("order-form").classList.add("hidden");
+            document.body.classList.remove("no-scroll");
+            document.querySelectorAll("button, input, textarea").forEach(function(element) {
+                element.disabled = false;
+            });
+        });
+
+        $(document).ready(function() {
+            $('#phone').on('input', function() {
+                var phone = $(this).val();
+                if (phone.length > 0) {
+                    $.ajax({
+                        url: '/get_customer_data',
+                        type: 'GET',
+                        data: { phone: phone },
+                        success: function(response) {
+                            $('#name').val(response.Cname);
+                            $('#address').val(response.Caddress);
+                            $('#notes').val(response.Cnote);
+                        },
+                        error: function() {
+                            $('#name').val('');
+                            $('#address').val('');
+                            $('#notes').val('');
+                        }
+                    });
+                } else {
+                    $('#name').val('');
+                    $('#address').val('');
+                    $('#notes').val('');
+                }
+            });
+
+            $('#order-form').on('submit', function(event) {
+                event.preventDefault();
+                var orderDetails = $('#order-details').val();
+                var phone = $('#phone').val();
+                var name = $('#name').val();
+                var address = $('#address').val();
+                var notes = $('#notes').val();
+                var zone = $('#zone').val();
+                var discount = $('#discount').val();
+                var tocost = parseFloat($('#total-price-input').val());
+                if (isNaN(tocost)) tocost = 0;
+
+                var submitButton = $(this).find('button[type="submit"]');
+                submitButton.css('background-color', '#f39c12');
+
+                $.ajax({
+                    url: '/make-order',
+                    type: 'POST',
+                    data: {
+                        order: orderDetails,
+                        phone: phone,
+                        name: name,
+                        address: address,
+                        note: notes,
+                        zone: zone,
+                        discount: discount,
+                        tocost: tocost
+                    },
+                    success: function(response) {
+                        alert(response);
+                        $('#order-form')[0].reset();
+                        submitButton.css('background-color', '');
+                        document.body.classList.remove("no-scroll");
+                        document.getElementById("form-overlay").classList.add("hidden");
+                        document.getElementById("order-form").classList.add("hidden");
+                        document.querySelectorAll("button, input, textarea").forEach(function(element) {
+                            element.disabled = false;
+                        });
+                        window.location.reload();
+                    },
+                    error: function() {
+                        alert('حدث خطأ أثناء إرسال الطلب');
+                        submitButton.css('background-color', '');
+                    }
+                });
+            });
+
+            updateOrderSummary(); // تحديث ملخص الطلب عند تحميل الصفحة
+        });
+    </script>
+</body>
+</html>
